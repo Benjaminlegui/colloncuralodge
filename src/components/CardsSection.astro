@@ -1,0 +1,65 @@
+---
+import { getImage } from "astro:assets";
+import Card1 from "../../public/card-1.jpeg";
+import Card2 from "../../public/card-2.jpg";
+import Card3 from "../../public/card-3.jpg";
+import Cards from "./Cards/Cards";
+import Header from "./Header/Header";
+import Link from "./Link/Link";
+
+const optimizedCard1 = await getImage({ src: Card1, format: "webp" });
+const optimizedCard2 = await getImage({ src: Card2, format: "webp" });
+const optimizedCard3 = await getImage({ src: Card3, format: "webp" });
+
+const cards = [
+  {
+    img: optimizedCard1,
+    title: "Lorem, ipsum",
+    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    img: optimizedCard2,
+    title: "Lorem, ipsum",
+    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    img: optimizedCard3,
+    title: "Lorem, ipsum",
+    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+];
+---
+
+<section class="section">
+  <div class="container">
+    <div class="title">
+      <Header
+        tag={`h2`}
+        text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit`}
+        client:visible
+      />
+    </div>
+    <Cards cards={cards} client:visible />
+    <Link href={`#`} text={`Learn More`} type="secondary" color="black" />
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 100px 0;
+    overflow: hidden;
+  }
+
+  .title {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+  }
+</style>

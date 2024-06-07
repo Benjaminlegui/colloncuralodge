@@ -11,6 +11,18 @@
     flex-direction: column;
     align-items: center;
     transition: all .5s;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: -1;
+        opacity: 0;
+        transition: all .25s;
+    }
     
     @media (min-width: 1000px) {
         justify-content: space-between;
@@ -25,6 +37,12 @@
 
     &.open {
         transform: translateX(0);
+    }
+
+    &.scrolled {
+        .overlay {
+            opacity: .3;
+        }
     }
 }
 

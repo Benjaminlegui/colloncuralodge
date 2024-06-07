@@ -58,5 +58,18 @@
                 transform: translateX(0);
             }
         }
+
+        &.black {
+            color: black;
+            border-color: black;
+
+            &::after {
+                background-color: black;
+            }
+
+            &:hover {
+                color: white;
+            }
+        }
     }
 }
