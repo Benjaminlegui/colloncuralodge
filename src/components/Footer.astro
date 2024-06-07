@@ -1,0 +1,86 @@
+---
+import Link from "./Link/Link";
+import facebookIcon from "../../public/facebook.svg";
+import instagramIcon from "../../public/ig.png";
+---
+
+<footer class="footer">
+  <div class="container">
+    <ul role="list" class="list">
+      <li>
+        <Link href="/#" text={`lodge`}>Lodge</Link>
+      </li>
+      <li><Link href="/#" text={`Fishing`} /></li>
+      <li><Link href="/#" text={`Program`} /></li>
+      <li><Link href="/about" text={`About Us`} /></li>
+      <li><Link href="/#" text={`Journal`} /></li>
+    </ul>
+    <div class="column">
+      <h4 class="column-title">Contact us</h4>
+      <ul role="list" class="contact-list">
+        <li>
+          <a href="tel:+1 706.550.1669">US: +1 706.550.1669 / 371.3378</a>
+        </li>
+        <li>
+          <a href="tel:+54.9.11.6300.3030">ARG: +54.9.11.6300.3030 </a>
+        </li>
+        <li>
+          <a href="mailto: info@colloncura.com">info@colloncura.com</a>
+        </li>
+      </ul>
+    </div>
+    <div class="column">
+      <h4 class="column-title">Follow Us</h4>
+      <div class="socials">
+        <a href="facebook.com"
+          ><img class="social" src={facebookIcon.src} alt="" /></a
+        >
+        <a href="instagram.com"
+          ><img class="social" src={instagramIcon.src} alt="" /></a
+        >
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .footer {
+      padding: 50px 0;
+      background-color: #c0b283;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 100px;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .column {
+      color: white;
+    }
+
+    .column-title {
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social {
+      width: 25px;
+    }
+  </style>
+</footer>

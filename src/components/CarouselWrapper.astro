@@ -1,0 +1,52 @@
+---
+import Carousel from "./Carousel/Carousel";
+import { getImage } from "astro:assets";
+import Card1 from "../../public/card-1.jpeg";
+import Card2 from "../../public/card-2.jpg";
+import Card3 from "../../public/card-3.jpg";
+import Header from "./Header/Header";
+
+const optimizedCard1 = await getImage({ src: Card1, format: "webp" });
+const optimizedCard2 = await getImage({ src: Card2, format: "webp" });
+const optimizedCard3 = await getImage({ src: Card3, format: "webp" });
+
+const cards = [optimizedCard1, optimizedCard2, optimizedCard3];
+---
+
+<section class="section">
+  <div class="container">
+    <div class="title">
+      <Header
+        tag={`h2`}
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        client:visible
+      />
+    </div>
+    <div>
+      <Carousel cards={cards} client:load />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 50px 0;
+    background-color: #c0b283;
+  }
+
+  .title {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 768px) {
+      gap: 80px;
+    }
+  }
+</style>

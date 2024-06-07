@@ -34,7 +34,7 @@ const Nav = () => {
                 <li><Link href="/about" className={styles.link} text={`About Us`}></Link></li>
                 <li><Link href="/#" className={styles.link} text={`Journal`}></Link></li>
             </ul>
-            <Link href={`/contact-us`} text={`contact us`} type='secondary' />
+            <Link href={`#contact`} text={`contact us`} type='secondary' />
         </nav>
     </>
 }

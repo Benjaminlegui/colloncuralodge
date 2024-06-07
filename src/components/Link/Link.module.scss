@@ -1,5 +1,7 @@
 .link {
     color: white;
+    position: relative;
+    z-index: 2;
     
     &.primary {
         text-transform: uppercase;

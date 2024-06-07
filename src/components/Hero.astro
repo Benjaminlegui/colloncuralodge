@@ -11,11 +11,7 @@ import Link from "./Link/Link";
     <div class="overlay"></div>
     <div class:list={["content"]}>
       <Heading text={`Collon Cura Lodge`} tag={"h1"} class="title" />
-      <Link
-        href={`/contact-us`}
-        text={`start you adventure`}
-        type={"secondary"}
-      />
+      <Link href={`#contact`} text={`start you adventure`} type={"secondary"} />
     </div>
   </div>
 </section>
@@ -23,11 +19,15 @@ import Link from "./Link/Link";
 <style lang="scss">
   section {
     min-height: 300px;
-    padding: 400px 0 300px;
+    padding: 200px 0 200px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 1000px) {
+      padding: 300px 0 200px;
+    }
   }
 
   .overlay {
