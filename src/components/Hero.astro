@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import Heading from "./Heading.astro";
+import Background from "../../public/Collon-4.jpeg";
+import Link from "./Link/Link";
+---
+
+<section>
+  <div class="container">
+    <Image src={Background} alt="Collon" class:list={["image"]} />
+    <div class="overlay"></div>
+    <div class:list={["content"]}>
+      <Heading text={`Collon Cura Lodge`} tag={"h1"} class="title" />
+      <Link
+        href={`/contact-us`}
+        text={`start you adventure`}
+        type={"secondary"}
+      />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    min-height: 300px;
+    padding: 400px 0 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+</style>

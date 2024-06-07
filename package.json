@@ -1,0 +1,23 @@
+{
+  "name": "hilarious-hubble",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.5.0",
+    "@fontsource-variable/alegreya": "^5.0.14",
+    "@fontsource-variable/bitter": "^5.0.19",
+    "@fontsource/poppins": "^5.0.14",
+    "@fontsource/roboto": "^5.0.13",
+    "astro": "^4.10.0"
+  },
+  "devDependencies": {
+    "sass": "^1.77.4"
+  }
+}

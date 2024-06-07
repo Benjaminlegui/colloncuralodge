@@ -1,0 +1,62 @@
+.link {
+    color: white;
+    
+    &.primary {
+        text-transform: uppercase;
+        position: relative;
+        transition: all 0.25s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all 0.25s;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &.secondary {
+        display: inline-block;
+        color: white;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        border: 2px solid white;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.25s;
+    
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: all 0.25s;
+        }
+    
+        &:hover {
+            color: black;
+    
+            &::after {
+                transform: translateX(0);
+            }
+        }
+    }
+}

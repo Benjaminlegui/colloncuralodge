@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+}
+import "../styles/global.scss";
+import "@fontsource/poppins";
+import "@fontsource/roboto";
+import Nav from "../components/Nav/Nav";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav client:load />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", serif;
+  }
+</style>
