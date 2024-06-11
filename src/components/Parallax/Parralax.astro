@@ -17,5 +17,10 @@ let backgroundUrl = `url(${optimizedImage.src})`;
   .paraxify {
     background-image: var(--backgroundUrl);
     height: 400px;
+    background-attachment: initial !important;
+
+    @media (min-width: 1200px) {
+      background-attachment: fixed !important;
+    }
   }
 </style>

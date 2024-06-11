@@ -71,6 +71,7 @@ import styles from "./Nav.module.scss";
   const hamburger = document.querySelector("[data-hamburger]");
   const menu = document.querySelector("[data-menu]");
   const scrolled = `${styles.scrolled}`;
+  const open = `${styles.open}`;
 
   window.addEventListener("scroll", (e) => {
     if (window.scrollY > 0) {
@@ -82,8 +83,10 @@ import styles from "./Nav.module.scss";
 
   hamburger.addEventListener("click", () => {
     if (menu.classList.contains(`${styles.open}`)) {
+      console.log("test");
       menu.classList.remove(`${styles.open}`);
     } else {
+      console.log("none");
       menu.classList.add(`${styles.open}`);
     }
   });

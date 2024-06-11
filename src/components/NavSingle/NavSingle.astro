@@ -49,27 +49,3 @@ import styles from "./NavSingle.module.scss";
     />
   </div>
 </nav>
-
-<script>
-  import styles from "./NavSingle.module.scss";
-  const nav = document.querySelector("[data-nav]");
-  const hamburger = document.querySelector("[data-hamburger]");
-  const menu = document.querySelector("[data-menu]");
-  const scrolled = `${styles.scrolled}`;
-
-  window.addEventListener("scroll", (e) => {
-    if (window.scrollY > 0) {
-      nav.classList.add(scrolled);
-    } else {
-      nav.classList.remove(scrolled);
-    }
-  });
-
-  hamburger.addEventListener("click", () => {
-    if (menu.classList.contains(`${styles.open}`)) {
-      menu.classList.remove(`${styles.open}`);
-    } else {
-      menu.classList.add(`${styles.open}`);
-    }
-  });
-</script>

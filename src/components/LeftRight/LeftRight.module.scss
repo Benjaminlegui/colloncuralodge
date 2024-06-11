@@ -1,5 +1,6 @@
 .left-right {
     padding: 50px 0;
+    overflow: hidden;
     
     &.color {
         background-color: #c0b283;
@@ -12,7 +13,16 @@
     margin-top: -200px;
 
     img {
-        aspect-ratio: 776 / 802;
+        aspect-ratio: 3 / 2;
+        object-position: center;
+        object-fit: cover;
+        height: initial;
+
+        @media (min-width: 1000px) {
+            aspect-ratio: 776 / 802;
+            max-width: 776px;
+            margin-top: initial;
+        }
     }
     
     @media (min-width: 1000px) {

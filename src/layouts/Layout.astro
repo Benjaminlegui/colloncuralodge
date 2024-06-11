@@ -2,16 +2,18 @@
 interface Props {
   title: string;
   layout: string;
+  href: string;
 }
 import "../styles/global.scss";
 import "@fontsource/poppins";
 import "@fontsource/roboto";
 import Nav from "../components/Nav/Nav.astro";
 import NavSingle from "../components/NavSingle/NavSingle.astro";
+import GlobalButton from "../components/GlobalButton/GlobalButton.astro";
 import Footer from "../components/Footer.astro";
 import "../../public/parallax/_paraxify.scss";
 
-const { title, layout } = Astro.props;
+const { title, layout, href } = Astro.props;
 const isTrue = layout === "single";
 ---
 
@@ -27,6 +29,7 @@ const isTrue = layout === "single";
     <title>{title}</title>
   </head>
   <body>
+    <GlobalButton href={href} />
     {!isTrue ? <Nav /> : <NavSingle />}
     <slot />
     <Footer />
