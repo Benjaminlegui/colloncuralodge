@@ -1,0 +1,75 @@
+---
+import Link from "../Link/Link.astro";
+import styles from "./Nav.module.scss";
+---
+
+<nav data-nav class={`${styles.nav}`}>
+  <a href="/" class={`${styles.link} ${styles.logo} ${styles["logo--desktop"]}`}
+    >CollonCuraLodge</a
+  >
+  <div class={styles["overlay"]}></div>
+  <button class={styles.hamburger} data-hamburger>
+    <div class={styles.bar}></div>
+    <div class={styles.bar}></div>
+    <div class={styles.bar}></div>
+  </button>
+  <div class={`${styles.menu}`} data-menu>
+    <a
+      href="/"
+      class={`${styles.link} ${styles.logo} ${styles["logo--mobile"]}`}
+      >CollonCuraLodge</a
+    >
+    <ul class={styles.list} role="list">
+      <li>
+        <Link href="/#" class={styles.link} text={`lodge`} type="primary" />
+        <li>
+          <Link href="/#" class={styles.link} text={`Fishing`} type="primary" />
+        </li>
+        <li>
+          <Link href="/#" class={styles.link} text={`Program`} type="primary" />
+        </li>
+        <li>
+          <Link
+            href="/about"
+            class={styles.link}
+            text={`About Us`}
+            type="primary"
+          />
+        </li>
+        <li>
+          <Link href="/#" class={styles.link} text={`Journal`} type="primary" />
+        </li>
+      </li>
+    </ul>
+    <Link
+      href={`#contact`}
+      text={`contact us`}
+      type="secondary"
+      class={styles.contact}
+    />
+  </div>
+</nav>
+
+<script>
+  import styles from "./Nav.module.scss";
+  const nav = document.querySelector("[data-nav]");
+  const hamburger = document.querySelector("[data-hamburger]");
+  const menu = document.querySelector("[data-menu]");
+  const scrolled = `${styles.scrolled}`;
+
+  window.addEventListener("scroll", (e) => {
+    if (window.scrollY > 0) {
+      nav.classList.add(scrolled);
+    } else {
+      nav.classList.remove(scrolled);
+    }
+  });
+
+  hamburger.addEventListener("click", () => {
+    if (menu.classList.contains(`${styles.open}`)) {
+      menu.classList.remove(`${styles.open}`);
+    } else {
+      menu.classList.add(`${styles.open}`);
+    }
+  });
+</script>

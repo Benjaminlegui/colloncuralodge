@@ -1,5 +1,5 @@
 ---
-import Link from "./Link/Link";
+import Link from "./Link/Link.astro";
 import facebookIcon from "../../public/facebook.svg";
 import instagramIcon from "../../public/ig.png";
 ---
@@ -8,12 +8,12 @@ import instagramIcon from "../../public/ig.png";
   <div class="container">
     <ul role="list" class="list">
       <li>
-        <Link href="/#" text={`lodge`}>Lodge</Link>
+        <Link href="/#" text={`lodge`} type="primary" />
       </li>
-      <li><Link href="/#" text={`Fishing`} /></li>
-      <li><Link href="/#" text={`Program`} /></li>
-      <li><Link href="/about" text={`About Us`} /></li>
-      <li><Link href="/#" text={`Journal`} /></li>
+      <li><Link href="/#" text={`Fishing`} type="primary" /></li>
+      <li><Link href="/#" text={`Program`} type="primary" /></li>
+      <li><Link href="/about" text={`About Us`} type="primary" /></li>
+      <li><Link href="/#" text={`Journal`} type="primary" /></li>
     </ul>
     <div class="column">
       <h4 class="column-title">Contact us</h4>

@@ -1,0 +1,19 @@
+---
+const {
+  href,
+  target,
+  text,
+  type,
+  color,
+  class: className,
+  ...restProps
+} = Astro.props;
+import styles from "./Link.module.scss";
+---
+
+<a
+  class={`${className} ${styles.link} ${styles[type]} ${styles[color]}`}
+  href={href}
+  target={target}
+  {...restProps}>{text}</a
+>

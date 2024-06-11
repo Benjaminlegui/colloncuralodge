@@ -1,17 +1,47 @@
 ---
-import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
 import Heading from "./Heading.astro";
 import Background from "../../public/Collon-4.jpeg";
-import Link from "./Link/Link";
+import Background1 from "../../public/Collon-3.jpeg";
+import Link from "./Link/Link.astro";
+import Carousel from "./Carousel/Carousel";
+
+const optimizedBackground = await getImage({ src: Background, format: "webp" });
+const optimizedBackground1 = await getImage({
+  src: Background1,
+  format: "webp",
+});
+const optimizedBackground2 = await getImage({
+  src: Background,
+  format: "webp",
+});
+
+const backgrounds = [
+  optimizedBackground,
+  optimizedBackground1,
+  optimizedBackground2,
+];
 ---
 
 <section>
   <div class="container">
-    <Image src={Background} alt="Collon" class:list={["image"]} />
+    <div class="background">
+      <Carousel cards={backgrounds} client:load />
+    </div>
     <div class="overlay"></div>
     <div class:list={["content"]}>
-      <Heading text={`Collon Cura Lodge`} tag={"h1"} class="title" />
-      <Link href={`#contact`} text={`start you adventure`} type={"secondary"} />
+      <Heading
+        text={`Collon Cura Lodge`}
+        tag={"h1"}
+        class="title"
+        data-aos="fade-up"
+      />
+      <Link
+        href={`#contact`}
+        text={`start you adventure`}
+        type={"secondary"}
+        data-aos="fade-up"
+      />
     </div>
   </div>
 </section>
@@ -38,6 +68,23 @@ import Link from "./Link/Link";
     height: 100%;
     z-index: -1;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .image {

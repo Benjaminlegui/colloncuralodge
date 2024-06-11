@@ -1,8 +1,8 @@
 ---
-const { text, tag: Tag, class: className } = Astro.props;
+const { text, tag: Tag, class: className, ...restProps } = Astro.props;
 ---
 
-<Tag class={className}>{text}</Tag>
+<Tag class={className} {...restProps}>{text}</Tag>
 
 <style>
   h1,
