@@ -5,10 +5,12 @@
     height: initial;
     box-shadow: 1px 2px 25px -5px rgba(0, 0, 0, 0.75);
 
-    img {
-        aspect-ratio: 374 / 279;
+    .img {
+        aspect-ratio: 374 / 279 !important;
         object-fit: cover;
         object-position: center;
+        width: initial;
+        height: initial;
     }
 
     .meta {

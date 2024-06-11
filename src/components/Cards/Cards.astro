@@ -1,0 +1,21 @@
+---
+import Card from "../Card/Card.astro";
+import styles from "./Cards.module.scss";
+
+const { cards } = Astro.props;
+---
+
+<div class={styles.cards}>
+  {
+    cards.map((card, index) => (
+      <Card
+        title={card.title}
+        img={card.img}
+        copy={card.copy}
+        data-aos="fade-up"
+        data-aos-delay={`${index}00`}
+        data-aos-once="true"
+      />
+    ))
+  }
+</div>

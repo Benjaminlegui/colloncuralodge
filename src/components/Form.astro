@@ -2,14 +2,14 @@
 import { Image } from "astro:assets";
 import Background from "../../public/Collon-4.jpeg";
 import Link from "./Link/Link.astro";
-import Header from "./Header/Header";
+import Heading from "./Heading.astro";
 ---
 
 <section class="section" id="contact">
   <div class="overlay"></div>
   <Image src={Background} alt="Collon" class:list={["image"]} />
   <div class="container">
-    <form action="" class="form">
+    <form action="" class="form" data-aos="fade-up">
       <div class="fifty form-field">
         <label for="name">first name:</label>
         <input type="text" placeholder="First Name" />
@@ -34,7 +34,7 @@ import Header from "./Header/Header";
       <Link text={`Submit`} href={`#`} type="secondary" color="black" />
     </form>
     <div class="title">
-      <Header tag={`h2`} text={`Contact Us`} client:visible />
+      <Heading tag={`h2`} text={`Contact Us`} data-aos="fade-up" />
     </div>
   </div>
 </section>
