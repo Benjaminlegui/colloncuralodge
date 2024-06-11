@@ -1,0 +1,23 @@
+---
+import Image from "astro/components/Image.astro";
+import Background from "../../../public/Collon-4.jpeg";
+import Block from "../Block/Block.astro";
+import styles from "./LeftRight.module.scss";
+
+const { type } = Astro.props;
+---
+
+<section class={`${styles["left-right"]} ${styles[type]}`}>
+  <div class={`container-small ${styles.container}`}>
+    <div class={styles.right}>
+      <div data-aos="fade-left" data-aos-once="true" class={styles.block}>
+        <Block />
+      </div>
+    </div>
+    <div class={styles.left}>
+      <div data-aos="fade-right" data-aos-once="true" class={styles.image}>
+        <Image src={Background} alt="background" />
+      </div>
+    </div>
+  </div>
+</section>

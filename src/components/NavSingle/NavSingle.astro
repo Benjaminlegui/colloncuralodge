@@ -1,6 +1,6 @@
 ---
 import Link from "../Link/Link.astro";
-import styles from "./Nav.module.scss";
+import styles from "./NavSingle.module.scss";
 ---
 
 <nav data-nav class={`${styles.nav}`}>
@@ -42,7 +42,7 @@ import styles from "./Nav.module.scss";
       </li>
     </ul>
     <Link
-      href={`/contact`}
+      href={`#contact`}
       text={`contact us`}
       type="secondary"
       class={styles.contact}

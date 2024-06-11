@@ -3,11 +3,18 @@ import { Image } from "astro:assets";
 import Background from "../../public/Collon-4.jpeg";
 import Link from "./Link/Link.astro";
 import Heading from "./Heading.astro";
+
+const { no_background = true } = Astro.props;
 ---
 
 <section class="section" id="contact">
-  <div class="overlay"></div>
-  <Image src={Background} alt="Collon" class:list={["image"]} />
+  {no_background && <div class="overlay" />}
+  {
+    no_background && (
+      <Image src={Background} alt="Collon" class:list={["image"]} />
+    )
+  }
+
   <div class="container">
     <form action="" class="form" data-aos="fade-up" data-aos-once="true">
       <div class="fifty form-field">

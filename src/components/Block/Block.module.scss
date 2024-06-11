@@ -1,0 +1,16 @@
+.block {
+    width: 100%;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+}
+
+.title {
+    color: black !important;
+}
+
+.link {
+    align-self: center;
+}

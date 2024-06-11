@@ -1,0 +1,21 @@
+---
+import { getImage } from "astro:assets";
+import Background from "../../../public/Collon-4.jpeg";
+
+const { background } = Astro.props;
+
+const optimizedImage = await getImage({
+  src: background ? background : Background,
+  format: "webp",
+});
+let backgroundUrl = `url(${optimizedImage.src})`;
+---
+
+<div class="paraxify"></div>
+
+<style define:vars={{ backgroundUrl }}>
+  .paraxify {
+    background-image: var(--backgroundUrl);
+    height: 400px;
+  }
+</style>

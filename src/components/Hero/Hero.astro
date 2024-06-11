@@ -4,17 +4,19 @@ import Background from "../../../public/Collon-4.jpeg";
 import Heading from "../Heading.astro";
 import Link from "../Link/Link.astro";
 import styles from "./Hero.module.scss";
+
+const { title } = Astro.props;
 ---
 
 <section>
-  <div class={styles.container}>
+  <div class="container">
     <div class={styles.background}>
       <Image src={Background} alt="background" class={styles.image} />
     </div>
     <div class={styles.overlay}></div>
     <div class={styles.content}>
       <Heading
-        text={`Collon Cura Lodge`}
+        text={title}
         tag={"h1"}
         class={styles.title}
         data-aos="fade-up"
