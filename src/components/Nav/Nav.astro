@@ -1,6 +1,8 @@
 ---
 import Link from "../Link/Link.astro";
 import styles from "./Nav.module.scss";
+
+const { no_nav } = Astro.props;
 ---
 
 <nav data-nav class={`${styles.nav}`}>
@@ -19,7 +21,7 @@ import styles from "./Nav.module.scss";
       class={`${styles.link} ${styles.logo} ${styles["logo--mobile"]}`}
       >CollonCuraLodge</a
     >
-    <ul class={styles.list} role="list">
+    <ul class={`${styles.list}`} role="list">
       <li>
         <Link href="/#" class={styles.link} text={`lodge`} type="primary" />
         <li>

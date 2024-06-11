@@ -27,6 +27,12 @@
             opacity: .3;
         }
     }
+
+    &.none {
+        .list {
+            display: none;
+        }
+    }
 }
 
 .overlay {
@@ -138,6 +144,10 @@
     top: 200px;
     left: 50%;
     transform: translateX(-50%);
+
+    &.none {
+        display: none;
+    }
 
     @media (min-width: 1000px) {
         position: relative;
