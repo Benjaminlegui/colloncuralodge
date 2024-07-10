@@ -1,10 +1,10 @@
 ---
-import Carousel from "./Carousel/Carousel";
+import Carousel from "./Carousel/Carousel.astro";
 import { getImage } from "astro:assets";
 import Card1 from "../../public/card-1.jpeg";
 import Card2 from "../../public/card-2.jpg";
 import Card3 from "../../public/card-3.jpg";
-import Header from "./Header/Header";
+import Heading from "./Heading.astro";
 
 const optimizedCard1 = await getImage({ src: Card1, format: "webp" });
 const optimizedCard2 = await getImage({ src: Card2, format: "webp" });
@@ -16,15 +16,12 @@ const cards = [optimizedCard1, optimizedCard2, optimizedCard3];
 <section class="section">
   <div class="container">
     <div class="title">
-      <Header
+      <Heading
         tag={`h2`}
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-        client:visible
       />
     </div>
-    <div>
-      <Carousel cards={cards} client:load />
-    </div>
+    <Carousel cards={cards} />
   </div>
 </section>
 

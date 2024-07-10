@@ -1,0 +1,28 @@
+---
+import styles from "./Carousel.module.scss";
+
+const { cards } = Astro.props;
+---
+
+<div class={styles.carousel}>
+  <swiper-container
+    speed="1000"
+    loop="true"
+    autoplay="true"
+    autoplay-delay="3000"
+    effect="fade"
+    draggable="true"
+    (swiperslidechange)="slideChange()"
+    class={styles.swiper}
+  >
+    {
+      cards.map((card, index) => {
+        return (
+          <swiper-slide key={index}>
+            <img class={styles.img} src={card.src} alt="fishing image" />
+          </swiper-slide>
+        );
+      })
+    }
+  </swiper-container>
+</div>

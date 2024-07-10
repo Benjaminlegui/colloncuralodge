@@ -1,20 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero/Hero.astro";
+import HeroCarousel from "../components/HeroCarousel.astro";
 import CardsSection from "../components/CardsSection.astro";
-import Form from "../components/Form.astro";
+import FormSection from "../components/FormSection.astro";
 import Parralax from "../components/Parallax/Parralax.astro";
 import LeftRight from "../components/LeftRight/LeftRight.astro";
 import Background1 from "../../public/card-1.jpeg";
 import Background2 from "../../public/card-2.jpg";
 ---
 
-<Layout title="Collon Cura Lodge" layout="multi" href="/contact">
-  <Hero title="Collon Cura Lodge" />
-  <LeftRight type="color" />
-  <Parralax background={Background1} />
+<Layout title="Collon Cura Lodge" href="/contact">
+  <HeroCarousel title="Collon Cura Lodge" />
   <CardsSection />
+  <Parralax background={Background1} />
+  <LeftRight type="color" />
   <Parralax background={Background2} />
   <LeftRight type="color" />
-  <Form />
+  <FormSection />
 </Layout>

@@ -1,0 +1,50 @@
+.form {
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    order: 2;
+
+    @media (min-width: 768px) {
+        order: 1;
+    }
+
+    @media (min-width: 786px) {
+        width: 50%;
+    }
+}
+
+.fifty {
+    width: 100%;
+
+    @media (min-width: 1000px) {
+        width: calc(50% - 10px);
+    }
+}
+
+.full {
+    width: 100%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+textarea {
+    border-radius: 5px;
+    width: 100%;
+}

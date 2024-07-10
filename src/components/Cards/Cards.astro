@@ -6,16 +6,31 @@ const { cards } = Astro.props;
 ---
 
 <div class={styles.cards}>
-  {
-    cards.map((card, index) => (
-      <Card
-        title={card.title}
-        img={card.img}
-        copy={card.copy}
-        data-aos="fade-up"
-        data-aos-delay={`${index}00`}
-        data-aos-once="true"
-      />
-    ))
-  }
+  <swiper-container
+    draggable="true"
+    slides-per-view="1"
+    space-between="50"
+    breakpoints='{"768":{"slidesPerView":2, "spaceBetween":50}, "1024":{"slidesPerView":3, "spaceBetween":50}}'
+    class={styles.swiper}
+  >
+    {
+      cards.map(
+        (
+          card: { title: string; img: object; copy: string; href: string },
+          index: number
+        ) => {
+          return (
+            <swiper-slide key={index}>
+              <Card
+                title={card.title}
+                img={card.img}
+                copy={card.copy}
+                href={card.href}
+              />
+            </swiper-slide>
+          );
+        }
+      )
+    }
+  </swiper-container>
 </div>

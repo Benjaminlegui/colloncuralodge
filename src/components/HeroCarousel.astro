@@ -4,7 +4,7 @@ import Heading from "./Heading.astro";
 import Background from "../../public/Collon-4.jpeg";
 import Background1 from "../../public/Collon-3.jpeg";
 import Link from "./Link/Link.astro";
-import Carousel from "./Carousel/Carousel";
+import Carousel from "./Carousel/Carousel.astro";
 
 const optimizedBackground = await getImage({ src: Background, format: "webp" });
 const optimizedBackground1 = await getImage({
@@ -26,7 +26,7 @@ const backgrounds = [
 <section>
   <div class="container">
     <div class="background">
-      <Carousel cards={backgrounds} client:load />
+      <Carousel cards={backgrounds} />
     </div>
     <div class="overlay"></div>
     <div class:list={["content"]}>

@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import Background from "../../public/Collon-4.jpeg";
+import Link from "./Link/Link.astro";
+import Heading from "./Heading.astro";
+import Form from "./Form/Form";
+
+const { no_background = true } = Astro.props;
+---
+
+<section class="section" id="contact">
+  {no_background && <div class="overlay" />}
+  {
+    no_background && (
+      <Image src={Background} alt="Collon" class:list={["image"]} />
+    )
+  }
+
+  <div class="container">
+    <Form client:load />
+    <div
+      class="title"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-delay="200"
+    >
+      <Heading tag={`h2`} text={`Contact Us`} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    position: relative;
+    padding: 50px 0;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  .title {
+    color: white;
+    order: 1;
+
+    @media (min-width: 768px) {
+      order: 2;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+  }
+</style>

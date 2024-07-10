@@ -10,15 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.5.0",
+    "@astrojs/react": "^3.6.0",
+    "@astrojs/ts-plugin": "^1.9.0",
+    "@emailjs/browser": "^4.3.3",
     "@fontsource-variable/alegreya": "^5.0.14",
     "@fontsource-variable/bitter": "^5.0.19",
     "@fontsource/poppins": "^5.0.14",
     "@fontsource/roboto": "^5.0.13",
-    "astro": "^4.10.0",
+    "@hookform/resolvers": "^3.9.0",
+    "astro": "^4.11.5",
     "autoprefixer": "^10.4.19",
-    "framer-motion": "^11.2.10",
-    "swiper": "^11.1.4"
+    "react-hook-form": "^7.52.1",
+    "swiper": "^11.1.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "sass": "^1.77.4"

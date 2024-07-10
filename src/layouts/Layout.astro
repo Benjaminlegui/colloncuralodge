@@ -1,20 +1,18 @@
 ---
 interface Props {
   title: string;
-  layout: string;
   href: string;
 }
+
 import "../styles/global.scss";
 import "@fontsource/poppins";
 import "@fontsource/roboto";
 import Nav from "../components/Nav/Nav.astro";
-import NavSingle from "../components/NavSingle/NavSingle.astro";
 import GlobalButton from "../components/GlobalButton/GlobalButton.astro";
 import Footer from "../components/Footer.astro";
-import "../../public/js/_paraxify.scss";
+import "../styles/_paraxify.scss";
 
-const { title, layout, href } = Astro.props;
-const isTrue = layout === "single";
+const { title, href } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,15 +24,20 @@ const isTrue = layout === "single";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="js/paraxify.min.js" defer></script>
     <title>{title}</title>
   </head>
   <body>
     <GlobalButton href={href} />
-    {!isTrue ? <Nav /> : <NavSingle />}
+    <Nav />
     <slot />
     <Footer />
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline src="js/paraxify.min.js" defer></script>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+    ></script>
+
     <script is:inline>
       AOS.init();
     </script>
