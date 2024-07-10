@@ -4,14 +4,14 @@ import Background from "../../../public/Collon-4.jpeg";
 import Block from "../Block/Block.astro";
 import styles from "./LeftRight.module.scss";
 
-const { type } = Astro.props;
+const { type, block, ...restProps } = Astro.props;
 ---
 
-<section class={`${styles["left-right"]} ${styles[type]}`}>
+<section class={`${styles["left-right"]} ${styles[type]}`} {...restProps}>
   <div class={`container-small ${styles.container}`}>
     <div class={styles.right}>
       <div data-aos="fade-left" data-aos-once="true" class={styles.block}>
-        <Block />
+        <Block {...block} />
       </div>
     </div>
     <div class={styles.left}>

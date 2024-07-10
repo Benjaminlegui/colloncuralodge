@@ -1,0 +1,21 @@
+.faq {
+    padding: 20px 10px 10px 10px;
+    border-top: 1px solid white;
+    cursor: pointer;
+}
+
+.body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all .25s ease-in;
+    padding-top: 10px;
+
+    &:global(.open) {
+        grid-template-rows: 1fr;
+    }
+
+    p {
+        overflow: hidden;
+        color: white;
+    }
+}

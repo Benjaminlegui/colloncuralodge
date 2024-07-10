@@ -2,15 +2,14 @@
 import styles from "./Block.module.scss";
 import Heading from "../Heading.astro";
 import Link from "../Link/Link.astro";
+
+const { title, description, href } = Astro.props;
 ---
 
 <div class={styles.block}>
-  <Heading tag="h2" text="Lorem ipsum dolor" class={styles.title} />
+  <Heading tag="h2" text={title} class={styles.title} />
   <p class="description">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.
+    {description}
   </p>
   <Link
     href="#"

@@ -7,14 +7,23 @@ import Parralax from "../components/Parallax/Parralax.astro";
 import LeftRight from "../components/LeftRight/LeftRight.astro";
 import Background1 from "../../public/card-1.jpeg";
 import Background2 from "../../public/card-2.jpg";
+import Faqs from "../components/Faqs/Faqs.astro";
+
+const aboutUsInfo = {
+  title: "About Us",
+  description: `At Patagon Waters, we are dedicated to crafting the ultimate fly-fishing adventures in Patagonia. From doorstep to riverside, we manage every detail, allowing you to immerse yourself fully in the experience. Our itineraries are custom-tailored to your preferences and based on our extensive knowledge of Patagonia's diverse fisheries.
+  Patagonia, Argentina, is a fly fisherman's dream. Often called a sportsman’s paradise, it boasts some of the best trout waters in the world. Whether you seek the challenge of expansive tailwaters or the intimacy of pristine spring creeks, Patagonia offers something for every angler, from the seasoned expert to the eager novice.
+  With our combined decades of experience and a network of connections spanning from Northern to Southern Patagonia, we ensure each adventure is not only productive but also unforgettable. Rely on Patagonia Fly to deliver an outstanding fly-fishing adventure that captures the spirit of this unique region.
+`,
+};
 ---
 
 <Layout title="Collon Cura Lodge" href="/contact">
   <HeroCarousel title="Collon Cura Lodge" />
   <CardsSection />
   <Parralax background={Background1} />
-  <LeftRight type="color" />
+  <LeftRight type="color" id="about-us" block={aboutUsInfo} />
   <Parralax background={Background2} />
-  <LeftRight type="color" />
+  <Faqs />
   <FormSection />
 </Layout>

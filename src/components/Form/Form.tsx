@@ -58,7 +58,7 @@ const Form = () => {
         </div>
         <div className={`${styles.full} ${styles['form-field']}`}>
             <label htmlFor="text-area">Message</label>
-            <textarea name="text-area" placeholder="i'd like to know more about..."
+            <textarea name="text-area" className={styles['text-area']} placeholder="i'd like to know more about..."
             ></textarea>
             {errors.message && <p>{errors.message.message}</p>}
         </div>

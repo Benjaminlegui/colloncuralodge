@@ -1,0 +1,90 @@
+---
+import Heading from "../Heading.astro";
+import Faq from "../Faq/Faq.astro";
+import styles from "./Faqs.module.scss";
+
+const faqs = [
+  {
+    title: "Where should I go?",
+    description:
+      "Our team is very well experienced in the region and equipped to ask you the right questions to hone into your specific needs and curate the most ideal experience for you. Details like physical limitations (wading or floating only), preferred fishing methods (dries, nymphs, streamers, etc.), experience level, tackle weight preference, target species preference, accommodation needs, daily activity level, access to non-angling activities, and more play into our recommendations for your experience.",
+  },
+  {
+    title: "How do I get there?",
+    description:
+      "Any major hub in the US will offer direct flights to Buenos Aires Argentina, and then depending on your final destination, you are almost always just one short flight away from the finish line! We will help you choose the correct flights and coordinate any ground transfers you may need. With our help, travel is a breeze.",
+  },
+  {
+    title: "What should I bring?",
+    description:
+      "We have experience on every river we advertise and have custom and tested packing lists that will ensure your preparedness and ability to get the full experience of the river without worrying about not having what you’ll need.",
+  },
+  {
+    title: "When should I go?",
+    description:
+      "We will work with you to determine this depending on your preferred fishing methods and target species. Whether you love emergers, terrestrials, nymphs, streamers, mice, etc we can use our expertise and experience to put you on the right river at the right time to enjoy what you love most. We customize every itinerary to your needs!",
+  },
+  {
+    title: "How long should my trip be?",
+    description:
+      "This answer will heavily depend on your choices of lodges, fishing methods, and target species. The ideal itinerary is at least 7 days in-country. This allows you to experience at least 2-3 locations at a relaxed pace. The customized nature of our itineraries makes this entirely dependent on your wants and needs.",
+  },
+  {
+    title: "Why Northern Patagonia?",
+    description:
+      "Northern Patagonia is a fly fisherman's paradise. With fisheries as prolific and productive as any American fishery with a fraction of the traffic. Often compared to Montana 80 years ago, imagine fishing the Madison, Missouri, Big Horn, White, or any other, and only seeing a handful of other fishermen the entire day. That is truly what separates this region from any other.",
+  },
+];
+---
+
+<section class={styles.faqs}>
+  <div class="container">
+    <Heading
+      tag={`h2`}
+      text={`FAQs`}
+      class=`${styles.title} title`
+      data-aos="fade-up"
+      data-aos-once="true"
+    />
+    {
+      faqs &&
+        faqs.map(
+          (
+            faq: {
+              title: string;
+              description: string;
+              href: string | null;
+            },
+            index
+          ) => {
+            return (
+              <div
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-delay={`${index}00`}
+              >
+                <Faq {...faq} />
+              </div>
+            );
+          }
+        )
+    }
+  </div>
+</section>
+
+<script is:inline>
+  const faqs = document.querySelectorAll(".faq");
+
+  faqs.forEach((faq) => {
+    const head = faq.querySelector(".title");
+    const body = faq.querySelector(".body");
+
+    head.addEventListener("click", () => {
+      if (body.classList.contains(`open`)) {
+        body.classList.remove(`open`);
+      } else {
+        body.classList.add(`open`);
+      }
+    });
+  });
+</script>

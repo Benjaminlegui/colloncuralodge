@@ -1,0 +1,13 @@
+---
+import styles from "./Faq.module.scss";
+import Heading from "../Heading.astro";
+
+const { title, description, href } = Astro.props;
+---
+
+<div class={`faq ${styles.faq}`}>
+  <Heading tag={`h4`} text={title} class={`${styles.title} title`} />
+  <div class={`${styles.body} body`}>
+    <p>{description}</p>
+  </div>
+</div>

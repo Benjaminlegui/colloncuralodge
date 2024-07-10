@@ -21,43 +21,24 @@ import styles from "./Nav.module.scss";
     >
     <ul class={`${styles.list}`} role="list">
       <li>
-        <Link href="/lodge" class={styles.link} text={`lodge`} type="primary" />
-        <li>
-          <Link
-            href="/fishing"
-            class={styles.link}
-            text={`Fishing`}
-            type="primary"
-          />
-        </li>
-        <li>
-          <Link
-            href="/program"
-            class={styles.link}
-            text={`Program`}
-            type="primary"
-          />
-        </li>
-        <li>
-          <Link
-            href="/about"
-            class={styles.link}
-            text={`About Us`}
-            type="primary"
-          />
-        </li>
-        <li>
-          <Link
-            href="/journal"
-            class={styles.link}
-            text={`Journal`}
-            type="primary"
-          />
-        </li>
+        <Link
+          href="#program"
+          class={styles.link}
+          text={`Program`}
+          type="primary"
+        />
+      </li>
+      <li>
+        <Link
+          href="#about-us"
+          class={styles.link}
+          text={`About Us`}
+          type="primary"
+        />
       </li>
     </ul>
     <Link
-      href={`/contact`}
+      href={`#contact`}
       text={`contact us`}
       type="secondary"
       class={styles.contact}
