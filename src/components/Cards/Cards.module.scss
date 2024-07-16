@@ -10,12 +10,23 @@
         align-items: stretch;
     }
 
-    swiper-container::part(slide) {
+    swiper-slide {
         height: initial;
     }
 
-    swiper-slide {
-        height: initial;
-        max-width: 380px;
+    swiper-container::part(pagination) {
+        position: relative;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    swiper-container::part(bullet),
+    swiper-container::part(bullet-active) {
+        width: 12px;
+        height: 12px;
+        margin: initial;
     }
 }

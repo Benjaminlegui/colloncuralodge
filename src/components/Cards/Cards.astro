@@ -8,9 +8,10 @@ const { cards } = Astro.props;
 <div class={styles.cards}>
   <swiper-container
     draggable="true"
-    slides-per-view="1"
+    slides-per-view="1.2"
     space-between="50"
-    breakpoints='{"768":{"slidesPerView":2, "spaceBetween":50}, "1024":{"slidesPerView":3, "spaceBetween":50}}'
+    pagination='{"clickable": true}'
+    breakpoints='{"768":{"slidesPerView":21, "spaceBetween":50}, "1024":{"slidesPerView":3, "spaceBetween":50}}'
     class={styles.swiper}
   >
     {

@@ -20,17 +20,92 @@ import styles from "./Nav.module.scss";
       >CollonCuraLodge</a
     >
     <ul class={`${styles.list}`} role="list">
-      <li>
+      <li class={styles["list__item"]}>
         <Link
           href="#program"
           class={styles.link}
           text={`Program`}
           type="primary"
         />
+        <div class={styles.dropdown}>
+          <ul>
+            <li>
+              <Link
+                href="/programs/twin-river-float"
+                class={styles.link}
+                text={`Twin River Float`}
+                type="primary"
+              />
+            </li>
+            <li>
+              <Link
+                href="#"
+                class={styles.link}
+                text={`The 10-day Tour`}
+                type="primary"
+              />
+            </li>
+            <li>
+              <Link
+                href="#"
+                class={styles.link}
+                text={`Wade & Float Combo`}
+                type="primary"
+              />
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class={styles["list__item"]}>
+        <Link href="#" class={styles.link} text={`Rivers`} type="primary" />
+        <div class={styles.dropdown}>
+          <ul>
+            <li>
+              <Link
+                href="/rivers/collon-cura"
+                class={styles.link}
+                text={`Collon Cura`}
+                type="primary"
+              />
+            </li>
+            <li>
+              <Link
+                href="/rivers/chimehuin"
+                class={styles.link}
+                text={`chimehuin`}
+                type="primary"
+              />
+            </li>
+            <li>
+              <Link
+                href="/rivers/malleo"
+                class={styles.link}
+                text={`Malleo`}
+                type="primary"
+              />
+            </li>
+            <li>
+              <Link
+                href="/rivers/middle-limay"
+                class={styles.link}
+                text={`Middle Limay`}
+                type="primary"
+              />
+            </li>
+            <li>
+              <Link
+                href="/rivers/san-jose"
+                class={styles.link}
+                text={`San Jose`}
+                type="primary"
+              />
+            </li>
+          </ul>
+        </div>
       </li>
       <li>
         <Link
-          href="#about-us"
+          href="/#about-us"
           class={styles.link}
           text={`About Us`}
           type="primary"
@@ -38,7 +113,7 @@ import styles from "./Nav.module.scss";
       </li>
     </ul>
     <Link
-      href={`#contact`}
+      href={`/#contact`}
       text={`contact us`}
       type="secondary"
       class={styles.contact}
@@ -52,7 +127,6 @@ import styles from "./Nav.module.scss";
   const hamburger = document.querySelector("[data-hamburger]");
   const menu = document.querySelector("[data-menu]");
   const scrolled = `${styles.scrolled}`;
-  const open = `${styles.open}`;
 
   window.addEventListener("scroll", (e) => {
     if (window.scrollY > 0) {
@@ -64,10 +138,8 @@ import styles from "./Nav.module.scss";
 
   hamburger.addEventListener("click", () => {
     if (menu.classList.contains(`${styles.open}`)) {
-      console.log("test");
       menu.classList.remove(`${styles.open}`);
     } else {
-      console.log("none");
       menu.classList.add(`${styles.open}`);
     }
   });

@@ -2,7 +2,6 @@
 import Image from "astro/components/Image.astro";
 import Background from "../../../public/Collon-4.jpeg";
 import Heading from "../Heading.astro";
-import Link from "../Link/Link.astro";
 import styles from "./Hero.module.scss";
 
 const { title } = Astro.props;
@@ -20,13 +19,6 @@ const { title } = Astro.props;
         tag={"h1"}
         class={styles.title}
         data-aos="fade-up"
-      />
-      <Link
-        href={`#contact`}
-        text={`start you adventure`}
-        type={"secondary"}
-        data-aos="fade-up"
-        data-aos-delay="300"
       />
     </div>
   </div>
