@@ -37,30 +37,30 @@ const Form = () => {
         <div className={`${styles.fifty} ${styles['form-field']}`}>
             <label htmlFor="name">first name:</label>
             <input type="text" placeholder="First Name" {...register('name')} />
-            {errors?.name && <p>{errors.name.message}</p>}
+            {errors?.name && <p className={styles.error}>{errors.name.message}</p>}
         </div>
         <div className={`${styles.fifty} ${styles['form-field']}`}>
             <label htmlFor="last">last name:</label>
             <input type="text" placeholder="Last Name" {...register('last_name')} />
-            {errors?.last_name && <p>{errors.last_name.message}</p>}
+            {errors?.last_name && <p className={styles.error}>{errors.last_name.message}</p>}
         </div>
         <div className={`${styles.fifty} ${styles['form-field']}`}>
             <label htmlFor="email">email:</label>
             <input type="text" placeholder="Email" {...register('email')} />
-            {errors?.email && <p>{errors.email.message}</p>}
+            {errors?.email && <p className={styles.error}>{errors.email.message}</p>}
         </div>
         <div className={`${styles.fifty} ${styles['form-field']}`}>
             <label htmlFor="phone">phone</label>
             <input type="tel" name="Phone" {...register('phone', {
                 valueAsNumber: true
             })} />
-            {errors.phone && <p>{errors.phone.message}</p>}
+            {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
         </div>
         <div className={`${styles.full} ${styles['form-field']}`}>
             <label htmlFor="text-area">Message</label>
             <textarea name="text-area" className={styles['text-area']} placeholder="i'd like to know more about..."
             ></textarea>
-            {errors.message && <p>{errors.message.message}</p>}
+            {errors.message && <p className={styles.error}>{errors.message.message}</p>}
         </div>
         <button className={`${buttonStyle.link} ${buttonStyle.secondary} ${buttonStyle.black}`} disabled={isSubmitting} type="submit">{isSubmitting ? 'Loading...' : 'Submit'}</button>
     </form>
