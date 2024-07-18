@@ -1,8 +1,4 @@
 .rivers {
-    border-top: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 20px 0;
 
     h3 {
@@ -21,6 +17,66 @@
             a {
                 color: blue;
                 text-decoration: underline;
+            }
+        }
+    }
+
+    &__title {
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+    }
+
+    &__boxes {
+        display: flex;
+        gap: 20px;
+    }
+
+    .box {
+        position: relative;
+        overflow: hidden;
+
+        &__image {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+            height: initial;
+            transition: all .25s ease-in-out;
+        }
+
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            font-weight: 900;
+            width: 100%;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: .25s ease-in;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: .3;
+        }
+
+        &:hover {
+            .box__text {
+                opacity: 1;
+            }
+
+            .box__image {
+                transform: scale(1.05);
             }
         }
     }

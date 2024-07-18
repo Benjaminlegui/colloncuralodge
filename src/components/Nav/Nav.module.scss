@@ -9,8 +9,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     transition: all .5s;
+    align-items: center;
 
     @media (min-width: 1000px) {
         justify-content: space-between;
@@ -54,7 +54,6 @@
 .menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     position: absolute;
     top: 0;
@@ -65,18 +64,21 @@
     transform: translateX(100%);
     background-color: #c0b283;
     transition: all .5s;
-
+    padding: 100px 40px;
+    
     &.open {
         transform: translateX(0);
     }
-
+    
     @media (min-width: 1000px) {
         position: relative;
+        align-items: center;
         backdrop-filter: initial;
         transform: translateX(0);
         height: initial;
         transition: initial;
         background-color: initial;
+        padding: initial;
     }
 }
 
@@ -189,17 +191,17 @@
 .list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+    gap: 20px;
+    
     &.none {
         display: none;
     }
-
+    
     @media (min-width: 1000px) {
+        gap: 40px;
         position: relative;
         flex-direction: row;
         top: initial;

@@ -1,11 +1,30 @@
 ---
+import Image from "astro/components/Image.astro";
 import styles from "./Rivers.module.scss";
 ---
 
 <div class={styles.rivers}>
-  <h3>Visited Rivers:</h3>
-  <ul>
-    <li><a href="/rivers/collon-cura">Collon Cura</a></li>
-    <li><a href="/rivers/middle-limay">Middle Limay</a></li>
-  </ul>
+  <h3 class={styles["rivers__title"]}>Visited Rivers:</h3>
+  <div class={styles["rivers__boxes"]}>
+    <a class={styles["box"]} href="/rivers/collon-cura">
+      <span class={styles["box__text"]}>Collon Cura</span>
+      <Image
+        class={styles["box__image"]}
+        src="/Collon-3.jpeg"
+        alt="img"
+        width={500}
+        height={500}
+      />
+    </a>
+    <a class={styles["box"]} href="/rivers/middle-limay">
+      <span class={styles["box__text"]}>Middle Limay</span>
+      <Image
+        class={styles["box__image"]}
+        src="/Collon-3.jpeg"
+        alt="img"
+        width={500}
+        height={500}
+      />
+    </a>
+  </div>
 </div>

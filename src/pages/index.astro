@@ -8,6 +8,7 @@ import LeftRight from "../components/LeftRight/LeftRight.astro";
 import Background1 from "../../public/card-1.jpeg";
 import Background2 from "../../public/card-2.jpg";
 import Faqs from "../components/Faqs/Faqs.astro";
+import GrowingBoxes from "../components/GrowingBoxes/GrowingBoxes.astro";
 
 const aboutUsInfo = {
   title: "About Us",
@@ -18,12 +19,13 @@ const aboutUsInfo = {
 };
 ---
 
-<Layout title="Collon Cura Lodge" href="/contact">
-  <HeroCarousel title="Collon Cura Lodge" />
+<Layout title="Collon Cura Lodge" href="/#contact">
+  <HeroCarousel title="Patagon Waters" />
   <CardsSection />
   <Parralax background={Background1} />
   <LeftRight type="color" id="about-us" block={aboutUsInfo} />
   <Parralax background={Background2} />
+  <GrowingBoxes />
   <Faqs />
   <FormSection />
 </Layout>

@@ -1,10 +1,15 @@
 .block {
     width: 100%;
-    padding: 80px 60px;
+    padding: 40px 20px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: start;
+    
+    @media (min-width: 768px) {
+        padding: 80px 60px;
+    }
 }
 
 .title {
