@@ -14,6 +14,10 @@
         object-position: center;
         width: initial;
         height: initial;
+
+        @media (min-width: 1200px) {
+            aspect-ratio: 2 / 1 !important;
+        }
     }
 
     .meta {

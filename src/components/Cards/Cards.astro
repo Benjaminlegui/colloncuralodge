@@ -5,13 +5,13 @@ import styles from "./Cards.module.scss";
 const { cards } = Astro.props;
 ---
 
-<div class={styles.cards}>
+<div class={styles.cards} id="cards">
   <swiper-container
     draggable="true"
     slides-per-view="1.1"
     space-between="20"
     pagination='{"clickable": true}'
-    breakpoints='{"768":{"slidesPerView":21, "spaceBetween":50}, "1024":{"slidesPerView":3, "spaceBetween":50}}'
+    breakpoints='{"768":{"slidesPerView":2, "spaceBetween":50}, "1024":{"slidesPerView":3, "spaceBetween":50}}'
     class={styles.swiper}
   >
     {
@@ -35,3 +35,18 @@ const { cards } = Astro.props;
     }
   </swiper-container>
 </div>
+
+<script is:inline>
+  const cards = document.getElementById("cards");
+  const swiperEl = cards.querySelector("swiper-container");
+
+  function resizeHandler() {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
+      console.log("test");
+      swiperEl.swiper.destroy(false, true);
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", resizeHandler);
+  window.addEventListener("resize", resizeHandler);
+</script>
