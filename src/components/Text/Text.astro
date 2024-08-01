@@ -2,7 +2,9 @@
 import styles from "./Text.module.scss";
 ---
 
-<div class={styles.text}>
-  <slot />
-  <slot name="rivers" />
+<div class="container">
+  <div class={styles.text}>
+    <slot />
+    <slot name="rivers" />
+  </div>
 </div>

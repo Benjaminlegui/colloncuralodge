@@ -2,11 +2,60 @@
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero/Hero.astro";
 import Text from "../../components/Text/Text.astro";
+import Cards from "../../components/Cards/Cards.astro";
+import "./rivers.scss";
+
+import Card1 from "../../../public/card-1.jpeg";
+import Card2 from "../../../public/card-2.jpg";
+import Card3 from "../../../public/card-3.jpg";
+import Heading from "../../components/Heading.astro";
+
+const cards = [
+  {
+    img: Card1,
+    title: "Twin River Float",
+    copy: "This itinerary has a very honest name. If you can only spend one week in Northern Patagonia then this is what we believe to be the Ideal experience for an angler looking for a combination of the most productive waters in the region and the chance at true trophy fish.",
+    href: "/programs/twin-river-float",
+  },
+  {
+    img: Card2,
+    title: "The 10-dayTour",
+    copy: "We always say, if you’re going to fly halfway around the world, why not take your time once you’re there? This 10-day itinerary covers all the bases for lodge styles: classic, modern, luxury; and water types: meandering mild gradients, powerful tailwaters, and classic big freestone. It’s the full gambit stylistically and shows you the variety that Patagonia has to offer.",
+    href: "/programs/twin-river-float",
+  },
+  {
+    img: Card3,
+    title: "Wade & Float Combo",
+    copy: "If dry flies and sight fishing are your thing, then look no further. This itinerary covers the two best rivers in the region for these conditions. With the mix of wading and floating along with the diversity of food sources, you will be in a paradise for this technical brand of fishing.",
+    href: "/programs/twin-river-float",
+  },
+];
 ---
 
 <Layout title="Middle Limay" href="">
   <Hero title="Middle Limay" />
   <Text>
+    <a href="/" class="back">
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_59_14)">
+          <path
+            d="M32 15H3.41L11.7 6.71004L10.29 5.29004L0.289999 15.29C0.103748 15.4774 -0.000793457 15.7309 -0.000793457 15.995C-0.000793457 16.2592 0.103748 16.5127 0.289999 16.7L10.29 26.7L11.7 25.29L3.41 17H32V15Z"
+            fill="black"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_59_14">
+            <rect width="32" height="32" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <span>Back Home</span>
+    </a>
     <p>
       Flowing from the Pichi Picun Leufu dam and meandering for approximately 60
       miles before converging into the expansive Chocon Reservoir. Its grandeur
@@ -28,4 +77,10 @@ import Text from "../../components/Text/Text.astro";
       opportunities.
     </p>
   </Text>
+  <div class="carousel">
+    <div class="container">
+      <Heading text="Related Itineraries" tag={"h2"} class="title" />
+      <Cards cards={cards} />
+    </div>
+  </div>
 </Layout>

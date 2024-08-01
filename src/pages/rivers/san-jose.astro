@@ -2,11 +2,45 @@
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero/Hero.astro";
 import Text from "../../components/Text/Text.astro";
+import Cards from "../../components/Cards/Cards.astro";
+import "./rivers.scss";
+
+import Card3 from "../../../public/card-3.jpg";
+import Heading from "../../components/Heading.astro";
+
+const cards = [
+  {
+    img: Card3,
+    title: "Sea-Run Brown Trout",
+    copy: "Our fishing program works on a split day beat rotation where every two (2) anglers and their guide fish a morning and an evening session with an extended mid-day break with lunch and time to rest at the lodge between each session...",
+  },
+];
 ---
 
 <Layout title="San Jose" href="">
   <Hero title="San Jose" />
   <Text>
+    <a href="/" class="back">
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_59_14)">
+          <path
+            d="M32 15H3.41L11.7 6.71004L10.29 5.29004L0.289999 15.29C0.103748 15.4774 -0.000793457 15.7309 -0.000793457 15.995C-0.000793457 16.2592 0.103748 16.5127 0.289999 16.7L10.29 26.7L11.7 25.29L3.41 17H32V15Z"
+            fill="black"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_59_14">
+            <rect width="32" height="32" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <span>Back Home</span>
+    </a>
     <p>
       With annual returns of 50,000+ fish and an average size exceeding 8
       pounds, no other river in the world can rival the Rio Grande in
@@ -33,4 +67,10 @@ import Text from "../../components/Text/Text.astro";
       managed catch and release fishing policy.
     </p>
   </Text>
+  <div class="carousel">
+    <div class="container">
+      <Heading text="Related Itineraries" tag={"h2"} class="title" />
+      <Cards cards={cards} />
+    </div>
+  </div>
 </Layout>

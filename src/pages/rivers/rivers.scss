@@ -1,0 +1,32 @@
+.back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: underline;
+    color: blue;
+
+    svg {
+        transition: all .25s;
+
+        path {
+            fill: blue;
+        }
+    }
+
+    &:hover {
+        svg {
+            transform: translateX(-5px);
+        }
+    }
+}
+
+.carousel {
+    .container {
+        overflow: hidden;
+    }
+
+    .title {
+        color: black;
+        margin-bottom: 50px;
+    }
+}
