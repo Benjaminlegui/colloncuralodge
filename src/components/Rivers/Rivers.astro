@@ -6,25 +6,72 @@ import styles from "./Rivers.module.scss";
 <div class={styles.rivers}>
   <h3 class={styles["rivers__title"]}>Visited Rivers:</h3>
   <div class={styles["rivers__boxes"]}>
-    <a class={styles["box"]} href="/rivers/collon-cura">
-      <span class={styles["box__text"]}>Collon Cura</span>
-      <Image
-        class={styles["box__image"]}
-        src="/Collon-3.jpeg"
-        alt="img"
-        width={500}
-        height={500}
-      />
-    </a>
-    <a class={styles["box"]} href="/rivers/middle-limay">
-      <span class={styles["box__text"]}>Middle Limay</span>
-      <Image
-        class={styles["box__image"]}
-        src="/Collon-3.jpeg"
-        alt="img"
-        width={500}
-        height={500}
-      />
-    </a>
+    <div class={styles.column}>
+      <a class={styles["box"]} href="/rivers/collon-cura">
+        <span class={styles["box__text"]}>Collon Cura</span>
+        <Image
+          class={styles["box__image"]}
+          src="/Collon-3.jpeg"
+          alt="img"
+          width={500}
+          height={500}
+        />
+      </a>
+      <p>
+        Probably the most consistent and productive river In Northern Patagonia.
+        The Collon Cura river is nestled in a high desert valley, this river
+        emerges as a gem in the realm of fishing. Its productivity is on par
+        with the World’s best. However, it maintains its allure with notably
+        fewer crowds. Resembling the picturesque Snake River near Jackson Hole,
+        its banks are adorned with willows, complemented by towering sandstone
+        cliffs. Here, the river's gentle gradient and expansive gravel rifles
+        offer an inviting setting for both floating and wading enthusiasts with
+        a structure that can accommodate any level of physical capability.
+      </p>
+      <p>
+        Various methods find success on the Collon Cura. Big dry flies prove
+        particularly effective when deftly presented along the banks and
+        skillfully navigated through the riffles and runs. During still
+        mornings, trout rise gracefully in the tailouts, eddies, and soft
+        waters, feasting on mayfly spinners. As dusk descends, a vibrant caddis
+        hatch emerges, enticing strikes with patterns like the elk hair or
+        goddard caddis deftly danced across the water's surface. Yet, perhaps
+        the most rewarding tactic remains the art of streamer fishing, a method
+        yielding bountiful catches throughout the seasons.
+      </p>
+    </div>
+    <div class={styles.column}>
+      <a class={styles["box"]} href="/rivers/middle-limay">
+        <span class={styles["box__text"]}>Middle Limay</span>
+        <Image
+          class={styles["box__image"]}
+          src="/Collon-3.jpeg"
+          alt="img"
+          width={500}
+          height={500}
+        />
+      </a>
+      <p>
+        Flowing from the Pichi Picun Leufu dam and meandering for approximately
+        60 miles before converging into the expansive Chocon Reservoir. Its
+        grandeur is reflected in its formidable size, with flow rates ranging
+        from 7,000 cfs to 16,000 cfs, contingent upon the demands of electricity
+        production. Renowned as perhaps the most dynamic waterway in the
+        province, the lower Limay presents anglers with a diverse and vibrant
+        ecosystem sustained by the pristine, cool waters discharged from the
+        dam.
+      </p>
+      <p>
+        This river harbors an exceptionally tough population of rainbow trout,
+        renowned for their fighting prowess averaging between 17 to 21 inches
+        nourished year-round by a bountiful diet of aquatic insects and minnows.
+        Moreover, the lower Limay beckons with the promise of giant resident and
+        migratory brown trout, ranging from 20 to well over 30 inches in length.
+        Over the years, clients have triumphantly reeled in behemoths surpassing
+        the 30-inch mark. These majestic creatures grace the river throughout
+        the season, with the latter half heralding peak productivity and angling
+        opportunities.
+      </p>
+    </div>
   </div>
 </div>
