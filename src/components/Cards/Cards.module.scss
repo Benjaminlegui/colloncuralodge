@@ -4,29 +4,16 @@
     swiper-container::part(container) {
         overflow: visible;
         cursor: grab;
-
-        @media (min-width: 1200px) {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+        // display: flex;
+        // justify-content: space-between;
     }
 
     swiper-container::part(wrapper) {
         align-items: stretch;
-
-        @media (min-width: 1200px) {
-            flex-wrap: wrap;
-            gap: 20px;
-        }
     }
 
     swiper-slide {
         height: initial;
-
-        @media (min-width: 1200px) {
-            width: calc(50% - 10px);
-        }
     }
 
     swiper-container::part(pagination) {

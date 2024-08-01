@@ -35,18 +35,3 @@ const { cards } = Astro.props;
     }
   </swiper-container>
 </div>
-
-<script is:inline>
-  const cards = document.getElementById("cards");
-  const swiperEl = cards.querySelector("swiper-container");
-
-  function resizeHandler() {
-    if (window.matchMedia("(min-width: 1200px)").matches) {
-      console.log("test");
-      swiperEl.swiper.destroy(false, true);
-    }
-  }
-
-  window.addEventListener("DOMContentLoaded", resizeHandler);
-  window.addEventListener("resize", resizeHandler);
-</script>
