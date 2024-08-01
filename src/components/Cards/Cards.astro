@@ -17,13 +17,20 @@ const { cards } = Astro.props;
     {
       cards.map(
         (
-          card: { title: string; img: object; copy: string; href: string },
+          card: {
+            title: string;
+            img: object;
+            copy: string;
+            href: string;
+            subhead: string;
+          },
           index: number
         ) => {
           return (
             <swiper-slide key={index}>
               <Card
                 title={card.title}
+                subhead={card.subhead}
                 img={card.img}
                 copy={card.copy}
                 href={card.href}

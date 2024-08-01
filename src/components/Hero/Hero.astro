@@ -4,7 +4,7 @@ import Background from "../../../public/Collon-4.jpeg";
 import Heading from "../Heading.astro";
 import styles from "./Hero.module.scss";
 
-const { title } = Astro.props;
+const { title, copy, prehead } = Astro.props;
 ---
 
 <section>
@@ -14,12 +14,26 @@ const { title } = Astro.props;
     </div>
     <div class={styles.overlay}></div>
     <div class={styles.content}>
+      {
+        prehead && (
+          <p class={styles.prehead} data-aos="fade-up">
+            {prehead}
+          </p>
+        )
+      }
       <Heading
         text={title}
         tag={"h1"}
         class={styles.title}
         data-aos="fade-up"
       />
+      {
+        copy && (
+          <p class={styles.copy} data-aos="fade-up">
+            {copy}
+          </p>
+        )
+      }
     </div>
   </div>
 </section>

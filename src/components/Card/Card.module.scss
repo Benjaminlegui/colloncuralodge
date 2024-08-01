@@ -28,6 +28,12 @@
         height: 100%;
     }
 
+    &__subhead {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
     &__footer {
         display: flex;
         flex-direction: column;

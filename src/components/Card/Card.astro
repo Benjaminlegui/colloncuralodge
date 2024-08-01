@@ -2,13 +2,16 @@
 import styles from "./Card.module.scss";
 import Image from "astro/components/Image.astro";
 
-const { img, title, copy, href, ...restProps } = Astro.props;
+const { img, title, subhead, copy, href, ...restProps } = Astro.props;
 ---
 
 <a href={href} class={styles.card} {...restProps}>
   <Image src={img} alt="fishing photo" class={styles.img} />
   <div class={styles.meta}>
-    <h3>{title}</h3>
+    <div>
+      <h3>{title}</h3>
+      <p class={styles["card__subhead"]}>{subhead}</p>
+    </div>
     <p>{copy}</p>
     <div class={styles["card__footer"]}>
       <button class={styles["card__button"]}>Learn More</button>

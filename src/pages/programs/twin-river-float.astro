@@ -3,10 +3,12 @@ import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero/Hero.astro";
 import Text from "../../components/Text/Text.astro";
 import Rivers from "../../components/Rivers/Rivers.astro";
+
+const copy = `This itinerary has a very honest name. If you can only spend one week in Northern Patagonia then this is what we believe to be the Ideal experience for an angler looking for a combination of the most productive waters in the region and the chance at true trophy fish.`;
 ---
 
 <Layout title="Twin River Float" href="">
-  <Hero title="Twin River Float" />
+  <Hero title="Twin River Float" copy={copy} prehead="northern patagonia" />
   <Text>
     <div>
       <h6>Day 1:</h6>
