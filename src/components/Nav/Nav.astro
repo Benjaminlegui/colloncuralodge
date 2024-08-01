@@ -45,8 +45,8 @@ import Image from "astro/components/Image.astro";
           type="primary"
         />
         <div class={styles.dropdown}>
-          <ul>
-            <li>
+          <ul class={styles.submenu}>
+            <li class={styles["submenu__item"]}>
               <Link
                 href="/programs/twin-river-float"
                 class={styles.link}
@@ -54,7 +54,7 @@ import Image from "astro/components/Image.astro";
                 type="primary"
               />
             </li>
-            <li>
+            <li class={styles["submenu__item"]}>
               <Link
                 href="#"
                 class={styles.link}
@@ -62,7 +62,7 @@ import Image from "astro/components/Image.astro";
                 type="primary"
               />
             </li>
-            <li>
+            <li class={styles["submenu__item"]}>
               <Link
                 href="#"
                 class={styles.link}
@@ -70,7 +70,7 @@ import Image from "astro/components/Image.astro";
                 type="primary"
               />
             </li>
-            <li>
+            <li class={styles["submenu__item"]}>
               <Link
                 href="#"
                 class={styles.link}
@@ -83,47 +83,57 @@ import Image from "astro/components/Image.astro";
       </li>
       <li class={styles["list__item"]}>
         <Link href="#" class={styles.link} text={`Rivers`} type="primary" />
-        <div class={styles.dropdown}>
-          <ul>
-            <li>
-              <Link
-                href="/rivers/collon-cura"
-                class={styles.link}
-                text={`Collon Cura`}
-                type="primary"
-              />
+        <div class={`${styles.dropdown} ${styles.test}`}>
+          <ul class={styles.submenu}>
+            <li class={styles["submenu__item"]}>
+              <span>Northern Patagonia</span>
+              <ul class={styles["tertiary-menu"]}>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/rivers/collon-cura"
+                    class={`${styles.link}`}
+                    text={`Collon Cura`}
+                    type="primary"
+                  />
+                </li>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/rivers/chimehuin"
+                    class={`${styles.link}`}
+                    text={`chimehuin`}
+                    type="primary"
+                  />
+                </li>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/rivers/malleo"
+                    class={`${styles.link}`}
+                    text={`Malleo`}
+                    type="primary"
+                  />
+                </li>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/rivers/middle-limay"
+                    class={`${styles.link}`}
+                    text={`Middle Limay`}
+                    type="primary"
+                  />
+                </li>
+              </ul>
             </li>
-            <li>
-              <Link
-                href="/rivers/chimehuin"
-                class={styles.link}
-                text={`chimehuin`}
-                type="primary"
-              />
-            </li>
-            <li>
-              <Link
-                href="/rivers/malleo"
-                class={styles.link}
-                text={`Malleo`}
-                type="primary"
-              />
-            </li>
-            <li>
-              <Link
-                href="/rivers/middle-limay"
-                class={styles.link}
-                text={`Middle Limay`}
-                type="primary"
-              />
-            </li>
-            <li>
-              <Link
-                href="/rivers/san-jose"
-                class={styles.link}
-                text={`San Jose`}
-                type="primary"
-              />
+            <li class={styles["submenu__item"]}>
+              <span>Southern Patagonia</span>
+              <ul class={styles["tertiary-menu"]}>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/rivers/san-jose"
+                    class={`${styles.link}`}
+                    text={`Rio Grande`}
+                    type="primary"
+                  />
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

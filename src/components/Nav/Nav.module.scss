@@ -103,35 +103,117 @@
         margin-top: initial;
     }
 
-    ul {
+    .submenu {
         display: flex;
         flex-direction: column;
         gap: 10px;
         
         @media (min-width: 1000px) {
-            overflow: hidden;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.10);
             gap: initial;
         }
 
-        li {
+        &__item {
             list-style: none;
             min-width: max-content;
+            position: relative;
 
-            a {
+            &:first-child {
+                > a, span {
+                    border-top-right-radius: 8px;
+                    border-top-left-radius: 8px;
+                }
+            }
+
+            &:last-child {
+                > a, span {
+                    border-bottom-right-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                }
+            }
+
+            a, span {
                 padding-left: 10px;
+                min-width: max-content;
+                color: white;
+
+                @media (min-width: 1000px) {
+                    display: block;
+                    padding: 10px 20px;
+                    color: black;
+                }
 
                 &:hover {
                     background-color: #c0b283;
                     color: white;
                 }
 
+                &::after {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                .tertiary-menu {
+                    opacity: 1;
+                    pointer-events: initial;
+                }
+            }
+        }
+    }
+
+    .tertiary-menu {
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        
+        @media (min-width: 1000px) {
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            opacity: 0;
+            gap: initial;
+            margin-top: initial;
+        }
+
+        &__link {
+            list-style: none;
+            min-width: max-content;
+
+            &:first-child {
+                >a,
+                span {
+                    border-top-right-radius: 8px;
+                    border-top-left-radius: 8px;
+                }
+            }
+        
+            &:last-child {
+                >a,
+                span {
+                    border-bottom-right-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                }
+            }
+        
+            a,
+            span {
+                padding-left: 20px;
+        
                 @media (min-width: 1000px) {
                     display: block;
                     padding: 10px 20px;
                     color: black;
+                }
+
+                &:hover {
+                    background-color: #c0b283;
+                    color: white;
                 }
             }
         }
@@ -181,7 +263,7 @@
 
 .contact {
     position: absolute !important;
-    bottom: 50px;
+    bottom: 20px;
     width: calc(100% - 80px);
     left: 40px;
     text-align: center;
