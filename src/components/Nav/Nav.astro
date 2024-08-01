@@ -1,11 +1,21 @@
 ---
 import Link from "../Link/Link.astro";
 import styles from "./Nav.module.scss";
+import Image from "astro/components/Image.astro";
 ---
 
 <nav data-nav class={`${styles.nav}`}>
-  <a href="/" class={`${styles.link} ${styles.logo} ${styles["logo--desktop"]}`}
-    >Patangon Waters</a
+  <a
+    href="/"
+    class={`${styles.link} ${styles.logo} ${styles["logo--desktop"]}`}
+  >
+    <Image
+      src={`/patagon-menu.png`}
+      alt="fishing photo"
+      class={styles.img}
+      width={529}
+      height={247}
+    /></a
   >
   <div class={styles["overlay"]}></div>
   <button class={styles.hamburger} data-hamburger>
@@ -17,8 +27,15 @@ import styles from "./Nav.module.scss";
     <a
       href="/"
       class={`${styles.link} ${styles.logo} ${styles["logo--mobile"]}`}
-      >Patangon Waters</a
     >
+      <Image
+        src={`/patagon-menu.png`}
+        alt="fishing photo"
+        class={styles.img}
+        width={529}
+        height={247}
+      />
+    </a>
     <ul class={`${styles.list}`} role="list">
       <li class={styles["list__item"]}>
         <Link
