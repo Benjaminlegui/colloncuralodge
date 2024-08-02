@@ -1,0 +1,215 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero/Hero.astro";
+import Text from "../../components/Text/Text.astro";
+import Rivers from "../../components/Rivers/Rivers.astro";
+import Cards from "../../components/Cards/Cards.astro";
+import Heading from "../../components/Heading.astro";
+
+import Card1 from "../../../public/card-1.jpeg";
+import Card2 from "../../../public/card-2.jpg";
+import Card3 from "../../../public/card-3.jpg";
+
+const cards = [
+  {
+    img: Card1,
+    title: "Twin River Float",
+    subhead: "northern patagonia",
+    copy: "This itinerary has a very honest name. If you can only spend one week in Northern Patagonia then this is what we believe to be the Ideal experience for an angler looking for a combination of the most productive waters in the region and the chance at true trophy fish.",
+    href: "/programs/twin-river-float",
+  },
+  {
+    img: Card2,
+    title: "The 10-dayTour",
+    subhead: "northern patagonia",
+    copy: "We always say, if you’re going to fly halfway around the world, why not take your time once you’re there? This 10-day itinerary covers all the bases for lodge styles: classic, modern, luxury; and water types: meandering mild gradients, powerful tailwaters, and classic big freestone. It’s the full gambit stylistically and shows you the variety that Patagonia has to offer.",
+    href: "/programs/twin-river-float",
+  },
+  {
+    img: Card3,
+    title: "Wade & Float Combo",
+    subhead: "northern patagonia",
+    copy: "If dry flies and sight fishing are your thing, then look no further. This itinerary covers the two best rivers in the region for these conditions. With the mix of wading and floating along with the diversity of food sources, you will be in a paradise for this technical brand of fishing.",
+    href: "/programs/twin-river-float",
+  },
+  {
+    img: Card3,
+    title: "Sea-Run Brown Trout",
+    subhead: "southern patagonia",
+    copy: "Our fishing program works on a split day beat rotation where every two (2) anglers and their guide fish a morning and an evening session with an extended mid-day break with lunch and time to rest at the lodge between each session...",
+  },
+];
+
+const copy = `Our carefully crafted trip itinerary walks you through the standard travel requirements to/from Argentina and provides the day-to-day details on what it's like to spend a week fly fishing on the Rio Grande at San Jose Lodge. We offer an all-inclusive seven (7) night and six (6) day fly fishing package that operates on a fixed week Friday-Friday schedule from early February through early April. A stay at San Jose Lodge is an unforgettable fishing experience that needs to be lived to be fully appreciated.`;
+
+const rivers = [
+  {
+    river: "Río Grande",
+    img: "/Collon-3.jpeg",
+    texts: [
+      `With annual returns of 50,000+ fish and an average size exceeding 8 pounds, no other river in the world can rival the Rio Grande in Argentina's southern territory of Tierra del Fuego as the best place on the planet to catch sea-run brown trout. Combine the river with the best returns and the largest average size of sea-run brown trout with easy access to 12 miles of rested pools from a comfortable homestyle lodge designed for four (4) anglers per week, and that’s the San Jose Lodge fishing experience.
+        Studies have shown that sea-run brown trout can return to the Rio Grande over four times to spawn during their lifecycle and reach a weight that exceeds 20+ pounds. With an average size exceeding 8+ pounds it’s truly a privilege to fish the Rio Grande for this remarkable strain of sea-run brown trout.
+        It’s without question that the rivers on the island of Tierra del Fuego in southern Argentina are among the most productive sea-run brown trout fisheries in the world. Many suggest that the Rio Grande has a large average size and high annual return rates of sea trout because of the lack of commercial fishing, rich marine rearing environment, and strictly managed catch and release fishing policy.
+        `,
+    ],
+  },
+];
+---
+
+<Layout title="Sea-Run Brown Trout" href="">
+  <Hero title="Sea-Run Brown Trout" copy={copy} prehead="northern patagonia" />
+  <div class="container">
+    <Rivers columns={rivers} />
+  </div>
+  <Text>
+    <div>
+      <h4>Basic Itinerary:</h4>
+      <h6>7 nights 6 full fishing days</h6>
+      <p>
+        Our fishing program works on a split day beat rotation where every two
+        (2) anglers and their guide fish a morning and an evening session with
+        an extended mid-day break with lunch and time to rest at the lodge
+        between each session. Anglers meet their guides in the wader room after
+        breakfast each morning and typically work the fishing day so that you
+        are fishing first and last light of the day.
+      </p>
+      <p>
+        The section of the river that cuts through the San Jose property is
+        narrow and shallow and often requires a precise and stealthy approach to
+        find fishing success. Fish are found throughout every stretch of the
+        river with fewer fish landed in the shallower, faster, and more
+        technical pools and more numbers of fish hooked in the deeper runs that
+        hold higher densities of fish. Regardless of where the fish may be on
+        the river, our long-time experienced guides know where and when to find
+        them. With the proper approach, a skilled and well-prepared angler can
+        expect an average of 1-3 fish per session throughout the course of a
+        six-day fishing week.
+      </p>
+      <p>
+        The majority of the river can be fished with a 7 to 9-weight single-hand
+        fly rod with a floating line and a variety of interchangeable sink tips.
+        However, on windy days or when a run depends on making a longer cast
+        having a 6-7 weight switch or short spey rod (10’6’-11’6’) with an
+        integrated scandi style line is worth having in your quiver. A complete
+        angler will come prepared with multiple rods and line combinations
+        rigged and ready to fish a variety of techniques including skating dry
+        flies, drifting nymph rigs, and swinging or stripping large profile
+        streamers.
+      </p>
+      <p>
+        Wading the Rio Grande is easy, deep wading is rarely needed, the current
+        is relatively slow and the bottom is mainly small pea-sized gravel with
+        the occasional rib of slick bedrock scattered throughout some runs. Felt
+        or studded soles are not needed and only the most unstable waders might
+        need a wading staff/pole.
+      </p>
+    </div>
+    <div>
+      <h6>Program Highlights</h6>
+      <ul>
+        <li>Guaranteed single occupancy room, at no extra cost.</li>
+        <li>
+          Easy and quick fishing access to over 12 miles of the Rio Grande.
+        </li>
+        <li>Limited to only four (4) rods per week.</li>
+        <li>Exclusive experience for an exceptional value.</li>
+      </ul>
+    </div>
+    <div>
+      <h6>Day 1:</h6>
+      <ul>
+        <li>Overnight Flight to Buenos Aires</li>
+        <li>
+          Depart your home and take an overnight flight from New York, Atlanta,
+          Miami, Houston, or Dallas to Buenos Aires, Argentina.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h6>Day 2: THURSDAY</h6>
+      <ul>
+        <li>Arrive to the City of Buenos Aires & Explore</li>
+        <li>
+          Most flights from the US arrive at the Buenos Aires International
+          Airport by mid-morning, which allows the opportunity to transfer
+          across town and check in to your hotel and get some rest or head out
+          to explore the sights, sounds, and tastes of the city for the rest of
+          the day.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h6>Day 3: FRIDAY</h6>
+      <ul>
+        <li>Flight to Rio Grande & First Day of Fishing</li>
+        <li>
+          Check-out of your hotel and take a transfer to the Buenos Aires
+          Domestic Airport in time for your flight to Rio Grande. The flight to
+          Rio Grande takes approximately 3 and ½ hours. At the airport a
+          representative of San Jose Lodge will meet outside of baggage claim
+          and transfer you 1 hour to the lodge.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h6>Day 4-9: SATURDAY TO THURSDAY</h6>
+      <ul>
+        <li>Guided Fly Fishing on the Rio Grande</li>
+        <li>
+          Enjoy six (6) full days of guided fly fishing for sea-run brown trout
+          on the famed Rio Grande. Guests meet their guides after breakfast and
+          head to the river to fish for 4-5 hours before returning to the lodge
+          for a served lunch and mid-day siesta. After the mid-day break, guests
+          and guides return to the river to fish for the evening session until
+          the last light. Happy hour followed by dinner is served shortly after
+          returning to the lodge.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h6>Day 10: FRIDAY</h6>
+      <ul>
+        <li>Depart the Lodge & Return Journey Home</li>
+        <li>
+          The lodge will transfer you 1 hour to the Rio Grande Airport in time
+          to check in for your return flight to Buenos Aires. Once you arrive at
+          the Buenos Aires Domestic Airport you take a transfer across town to
+          the International Airport to connect with your return flight to the
+          US. Arrive at your home the following day.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h6>INCLUDED</h6>
+      <ul>
+        <li>
+          Seven (7) night accommodations at San Jose Lodge (single occupancy)
+        </li>
+        <li>Six (6) days of guided fishing (shared guide)</li>
+        <li>All meals at the lodge</li>
+        <li>Beer/wine/alcohol</li>
+      </ul>
+    </div>
+    <div>
+      <h6>NOT INCLUDED</h6>
+      <ul>
+        <li>Travel insurance</li>
+        <li>Travel expenses to/from the lodge</li>
+        <li>Transfers to/from Ushuaia</li>
+        <li>Fishing equipment (rods, reels, lines, flies, etc.)</li>
+        <li>Gratuities to the guides and staff</li>
+        <li>Fishing license</li>
+      </ul>
+    </div>
+  </Text>
+  <div style={{ overflow: "hidden" }}>
+    <div class="container">
+      <Heading
+        text="More Itineraries"
+        tag="h2"
+        style={{ color: "black", marginBottom: "40px" }}
+      />
+      <Cards cards={cards} />
+    </div>
+  </div>
+</Layout>

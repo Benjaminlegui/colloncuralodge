@@ -40,30 +40,30 @@ const cards = [
   },
 ];
 
-const copy = `This itinerary has a very honest name. If you can only spend one week in Northern Patagonia then this is what we believe to be the Ideal experience for an angler looking for a combination of the most productive waters in the region and the chance at true trophy fish.`;
+const copy = `If dry flies and sight fishing are your thing, then look no further. This itinerary covers the two best rivers in the region for these conditions. With the mix of wading and floating along with the diversity of food sources, you will be in a paradise for this technical brand of fishing.`;
 
 const rivers = [
   {
-    river: "Collón Curá",
+    river: "Malleo River",
+    img: "/Collon-3.jpeg",
+    texts: [
+      "The Malleo River stands as a paragon of consistency and quality. Rainbow and brook trout, averaging between 14 to 19 inches, grace its currents, with a respectable cohort of Browns ranging from 20 to 24 inches, and occasional behemoths claiming their share of the limelight each year. While not renowned for producing the largest trout in the area, the Malleo teems with an abundance of 16 to 19-inch specimens, drawn to the river's enchanting caddis and mayfly hatches.",
+      "A mosaic of waters awaits exploration, from the tranquil spring creeks to the rocky canyon rapids, down to the classic riffles, runs, and pools near the lodge. Casting to rising rainbows and browns amidst the willows, flats, and weed beds provides just the right amount of challenge, ensuring an exhilarating angling experience. With its waters teeming with trout, the Malleo guarantees action aplenty, even for novice anglers.",
+    ],
+  },
+  {
+    river: "Chimehuin",
     img: "/Collon-3.jpeg",
     texts: [
       "This river is the quintessential freestone river, adorned with majestic brown trout that rest in its shaded, willow-lined banks. Reminiscent of the iconic Madison River, it boasts authentic pools and runs, while in certain stretches, the river weaves into an intircate labyrinth of channels, imparting the ambiance of intimate waters yet holding the chance of sizable catches. Versatility is the name of the game here; from spirited pursuit with streamers and nymphs to enticing strikes with large attractor dry flies. Whether prospecting amidst the currents or meticulously matching the fervent hatches, anglers are sure to be inundated with activity.",
       "Rainbows and browns, averaging between 15 to 20 inches, dominate its waters, with a commendable number of specimens reaching up to 24 inches and even surpassing this mark. They are drawn in by the seasonal symphony of hatches which commences with the emergence of Caddis in early December, crescendoing into a peak later in the month and lingering through early January, accompanied by sporadic appearances of Mayflies. As February approaches, the curtain descends on the hatches, save for the nightly spectacle of sizable Yellow Drake hatches, tempting the elusive big browns to the surface. Throughout the summer, afternoon terrestrial fishing proves fruitful, reaching its zenith between late January and early March. As autumn settles, the river reverberates with the resurgence of Mayfly hatches. Streamer aficionados find solace throughout the seasons, but Spring and Fall emerge as the prime windows for pursuing hefty browns.",
     ],
   },
-  {
-    river: "Middle Limay",
-    img: "/Collon-3.jpeg",
-    texts: [
-      "Flowing from the Pichi Picun Leufu dam and meandering for approximately 60 miles before converging into the expansive Chocon Reservoir. Its grandeur is reflected in its formidable size, with flow rates ranging from 7,000 cfs to 16,000 cfs, contingent upon the demands of electricity production. Renowned as perhaps the most dynamic waterway in the province, the lower Limay presents anglers with a diverse and vibrant ecosystem sustained by the pristine, cool waters discharged from the dam.",
-      "This river harbors an exceptionally tough population of rainbow trout, renowned for their fighting prowess averaging between 17 to 21 inches nourished year-round by a bountiful diet of aquatic insects and minnows. Moreover, the lower Limay beckons with the promise of giant resident and migratory brown trout, ranging from 20 to well over 30 inches in length. Over the years, clients have triumphantly reeled in behemoths surpassing the 30-inch mark. These majestic creatures grace the river throughout the season, with the latter half heralding peak productivity and angling opportunities.",
-    ],
-  },
 ];
 ---
 
-<Layout title="Twin River Float" href="">
-  <Hero title="Twin River Float" copy={copy} prehead="northern patagonia" />
+<Layout title="wade and float combo" href="">
+  <Hero title="Wade and Float Combo" copy={copy} prehead="northern patagonia" />
   <div class="container">
     <Rivers columns={rivers} />
   </div>
@@ -97,19 +97,38 @@ const rivers = [
           Check-in to Collon Cura Lodge and enjoy a full fishing day on the
           Collon Cura River
         </li>
-        <li>Overnight accommodations at Collon Cura Lodge</li>
+        <li>Overnight accommodations at the Chemehuin Lodge</li>
       </ul>
     </div>
     <div>
-      <h6>Day 3-5:</h6>
+      <h6>Day 3-4:</h6>
       <ul>
         <li>Breakfast in the lodge</li>
+        <li>Full fishing day on the Collon Cura River</li>
+        <li>
+          Overnight accommodations at the Chemehuin Lodge (3 different lodge
+          options)
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h6>Day 5:</h6>
+      <ul>
+        <li>Breakfast and transfer to Collon Cura Lodge</li>
         <li>Full fishing day on the Collon Cura River</li>
         <li>Overnight accommodations at Collon Cura Lodge</li>
       </ul>
     </div>
     <div>
-      <h6>Day 6:</h6>
+      <h6>Day 6-7:</h6>
+      <ul>
+        <li>Breakfast in the lodge</li>
+        <li>Full fishing days on the Collon Cura River</li>
+        <li>Overnight accommodations at Collon Cura Lodge</li>
+      </ul>
+    </div>
+    <div>
+      <h6>Day 8:</h6>
       <ul>
         <li>Breakfast and transfer to Limay Lodge</li>
         <li>Full fishing day on the Middle Limay River</li>
@@ -117,15 +136,15 @@ const rivers = [
       </ul>
     </div>
     <div>
-      <h6>Day 7-8:</h6>
+      <h6>Day 9-10:</h6>
       <ul>
         <li>Breakfast in the lodge</li>
-        <li>Full fishing day on the Middle Limay River</li>
+        <li>Full fishing days on the Middle Limay River</li>
         <li>Overnight accommodations at Limay Lodge</li>
       </ul>
     </div>
     <div>
-      <h6>Day 9:</h6>
+      <h6>Day 11:</h6>
       <ul>
         <li>Breakfast and check out of Limay Lodge</li>
         <li>
