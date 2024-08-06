@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Card1 from "../../public/card-1.jpeg";
 import Card2 from "../../public/card-2.jpg";
 import Card3 from "../../public/card-3.jpg";
@@ -40,13 +41,16 @@ const cards = [
 
 <section class="section">
   <div class="container">
-    <Heading
-      tag={`h2`}
-      text={`Patagon Water Rivers`}
-      class="title"
-      data-aos="fade-up"
-      data-aos-once="true"
-    />
+    <div class="heading">
+      <Image src="/favicon-black.png" alt="logo" width="200" height="200" class="img" />
+      <Heading
+        tag={`h2`}
+        text={`Programs`}
+        class="title"
+        data-aos="fade-up"
+        data-aos-once="true"
+      />
+  </div>
     <Cards cards={cards} />
   </div>
 </section>
@@ -69,5 +73,15 @@ const cards = [
     flex-direction: column;
     gap: 100px;
     align-items: center;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+  }
+
+  .img {
+    width: 100px;
+    height: initial;
   }
 </style>

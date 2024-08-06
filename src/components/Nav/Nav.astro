@@ -47,36 +47,41 @@ import Image from "astro/components/Image.astro";
         <div class={styles.dropdown}>
           <ul class={styles.submenu}>
             <li class={styles["submenu__item"]}>
-              <Link
-                href="/programs/twin-river-float"
-                class={styles.link}
-                text={`Twin River Float`}
-                type="primary"
-              />
-            </li>
-            <li class={styles["submenu__item"]}>
-              <Link
-                href="/programs/the-10-day-tour"
-                class={styles.link}
-                text={`The 10-day Tour`}
-                type="primary"
-              />
-            </li>
-            <li class={styles["submenu__item"]}>
-              <Link
-                href="/programs/wade-and-float-combo"
-                class={styles.link}
-                text={`Wade & Float Combo`}
-                type="primary"
-              />
-            </li>
-            <li class={styles["submenu__item"]}>
-              <Link
-                href="/programs/sea-run-brown-trout"
-                class={styles.link}
-                text={`Sea Brown Trout`}
-                type="primary"
-              />
+              <span>Northern Patagonia</span>
+              <ul class={styles["tertiary-menu"]}>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                  href="/programs/twin-river-float"
+                  class={styles.link}
+                  text={`Twin River Float`}
+                  type="primary"
+                  />
+                </li>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/programs/the-10-day-tour"
+                    class={styles.link}
+                    text={`The 10-day Tour`}
+                    type="primary"
+                  />  
+                </li>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/programs/wade-and-float-combo"
+                    class={styles.link}
+                    text={`Wade & Float Combo`}
+                    type="primary"
+                  />
+                </li>
+                <li class={styles["tertiary-menu__link"]}>
+                  <Link
+                    href="/programs/sea-run-brown-trout"
+                    class={styles.link}
+                    text={`Sea Run Brown Trout`}
+                    type="primary"
+                  />
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -92,7 +97,7 @@ import Image from "astro/components/Image.astro";
                   <Link
                     href="/rivers/collon-cura"
                     class={`${styles.link}`}
-                    text={`Collon Cura`}
+                    text={`Collon Cura river`}
                     type="primary"
                   />
                 </li>
@@ -100,7 +105,7 @@ import Image from "astro/components/Image.astro";
                   <Link
                     href="/rivers/chimehuin"
                     class={`${styles.link}`}
-                    text={`chimehuin`}
+                    text={`chimehuin river`}
                     type="primary"
                   />
                 </li>
@@ -108,7 +113,7 @@ import Image from "astro/components/Image.astro";
                   <Link
                     href="/rivers/malleo"
                     class={`${styles.link}`}
-                    text={`Malleo`}
+                    text={`Malleo river`}
                     type="primary"
                   />
                 </li>
@@ -116,7 +121,7 @@ import Image from "astro/components/Image.astro";
                   <Link
                     href="/rivers/middle-limay"
                     class={`${styles.link}`}
-                    text={`Middle Limay`}
+                    text={`Middle Limay river`}
                     type="primary"
                   />
                 </li>
@@ -127,9 +132,9 @@ import Image from "astro/components/Image.astro";
               <ul class={styles["tertiary-menu"]}>
                 <li class={styles["tertiary-menu__link"]}>
                   <Link
-                    href="/rivers/san-jose"
+                    href="/rivers/rio-grande"
                     class={`${styles.link}`}
-                    text={`Rio Grande`}
+                    text={`Rio Grande river`}
                     type="primary"
                   />
                 </li>

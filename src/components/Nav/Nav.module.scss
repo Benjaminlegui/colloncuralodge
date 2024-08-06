@@ -120,6 +120,10 @@
             min-width: max-content;
             position: relative;
 
+            span {
+                text-transform: uppercase;
+            }
+
             &:first-child {
                 > a, span {
                     border-top-right-radius: 8px;
