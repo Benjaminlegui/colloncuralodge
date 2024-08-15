@@ -1,0 +1,8 @@
+---
+import { Image } from "astro:assets";
+import styles from './ImageOptimized.module.scss';
+
+const { imgSrc } = Astro.props;
+---
+
+<Image src={imgSrc} alt="pepe" class={styles.img} />

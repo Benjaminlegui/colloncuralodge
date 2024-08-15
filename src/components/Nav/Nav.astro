@@ -128,17 +128,12 @@ import Image from "astro/components/Image.astro";
               </ul>
             </li>
             <li class={styles["submenu__item"]}>
-              <span>Southern Patagonia</span>
-              <ul class={styles["tertiary-menu"]}>
-                <li class={styles["tertiary-menu__link"]}>
-                  <Link
-                    href="/rivers/rio-grande"
-                    class={`${styles.link}`}
-                    text={`Rio Grande river`}
-                    type="primary"
-                  />
-                </li>
-              </ul>
+              <Link
+                href="/rivers/rio-grande"
+                class={`${styles.link}`}
+                text={`Rio Grande river`}
+                type="primary"
+              />
             </li>
           </ul>
         </div>

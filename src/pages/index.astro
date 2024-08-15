@@ -5,10 +5,14 @@ import CardsSection from "../components/CardsSection.astro";
 import FormSection from "../components/FormSection.astro";
 import Parralax from "../components/Parallax/Parralax.astro";
 import LeftRight from "../components/LeftRight/LeftRight.astro";
-import Background1 from "../../public/card-1.jpeg";
+import Background1 from "../../public/parallax/parallax-1.jpg";
 import Background2 from "../../public/card-2.jpg";
 import Faqs from "../components/Faqs/Faqs.astro";
 import GrowingBoxes from "../components/GrowingBoxes/GrowingBoxes.astro";
+import carouselImage1 from "../../public/homepage-carousel/carousel-1.jpg";
+import carouselImage2 from "../../public/homepage-carousel/carousel-2.jpg";
+import carouselImage3 from "../../public/homepage-carousel/carousel-3.jpg";
+import carouelImage4 from "../../public/homepage-carousel/carousel-4.jpg";
 
 const aboutUsInfo = {
   title: "About Us",
@@ -17,10 +21,17 @@ const aboutUsInfo = {
   With our combined decades of experience and a network of connections spanning from Northern to Southern Patagonia, we ensure each adventure is not only productive but also unforgettable. Rely on Patagonia Fly to deliver an outstanding fly-fishing adventure that captures the spirit of this unique region.
 `,
 };
+
+const cards = [
+  carouselImage1,
+  carouselImage2,
+  carouselImage3,
+  carouelImage4,
+];
 ---
 
 <Layout title="Collon Cura Lodge" href="/#contact">
-  <HeroCarousel title="Patagon Waters" />
+  <HeroCarousel title="Patagon Waters" images={cards} />
   <CardsSection />
   <Parralax background={Background1} />
   <LeftRight type="color" id="about-us" block={aboutUsInfo} />
