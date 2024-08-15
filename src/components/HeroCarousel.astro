@@ -1,5 +1,4 @@
 ---
-import { getImage } from "astro:assets";
 import Heading from "./Heading.astro";
 import Slide from "./Slide/Slide.astro";
 import ImageOptimized from "./Image/ImageOptimized.astro";
@@ -9,11 +8,11 @@ import Carousel from "./Carousel/Carousel.astro";
 
 
 
-const { title, images } = Astro.props;
+const { title, images, prehead, copy, button = false, className } = Astro.props;
 ---
 
-<section>
-  <div class="container">
+<section class={`${className}`}>
+  <div class={`container`}>
     <div class="background">
       <Carousel cards={images}>
         {images.map((image) => {
@@ -27,14 +26,32 @@ const { title, images } = Astro.props;
     </div>
     <div class="overlay"></div>
     <div class:list={["content"]}>
+      <div>
+      {
+        prehead && (
+          <p class='prehead' data-aos="fade-up">
+            {prehead}
+          </p>
+        )
+      }
       <Heading text={title} tag={"h1"} class="title" data-aos="fade-up" />
-      <Link
-        href={`#contact`}
-        text={`start you adventure`}
-        type={"secondary"}
-        data-aos="fade-up"
-        data-aos-delay="300"
-      />
+    </div>
+      {
+        copy && (
+          <p class='copy' data-aos="fade-up">
+            {copy}
+          </p>
+        )
+      }
+      {button && (
+        <Link
+          href={`#contact`}
+          text={`start you adventure`}
+          type={"secondary"}
+          data-aos="fade-up"
+          data-aos-delay="300"
+        />
+      )}
     </div>
   </div>
 </section>
@@ -50,6 +67,14 @@ const { title, images } = Astro.props;
 
     @media (min-width: 1000px) {
       padding: 300px 0 200px;
+    }
+
+    &.sm {
+      padding: 100px 0;
+
+      @media (min-width: 1000px) {
+        padding: 200px 0;
+      }
     }
   }
 
@@ -97,5 +122,17 @@ const { title, images } = Astro.props;
     align-items: center;
     text-align: center;
     gap: 40px;
+  }
+
+  .prehead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
+
+  .copy {
+      margin: 0 auto;
+      max-width: 800px;
+      color: white;
   }
 </style>

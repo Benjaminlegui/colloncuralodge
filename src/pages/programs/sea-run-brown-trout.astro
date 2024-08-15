@@ -1,14 +1,29 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero/Hero.astro";
+import HeroCarousel from "../../components/HeroCarousel.astro";
 import Text from "../../components/Text/Text.astro";
 import Rivers from "../../components/Rivers/Rivers.astro";
 import Cards from "../../components/Cards/Cards.astro";
 import Heading from "../../components/Heading.astro";
 
-import Card1 from "../../../public/card-1.jpeg";
-import Card2 from "../../../public/card-2.jpg";
-import Card3 from "../../../public/card-3.jpg";
+import Card1 from "../../../public/Cards/Twin-river.jpg";
+import Card2 from "../../../public/Cards/card_10_day.jpg";
+import Card3 from "../../../public/Cards/wade-and-float.jpeg";
+import Card4 from "../../../public/Cards/card_sea_brown_trout.jpg";
+
+import carouselImage1 from "../../../public/programs/sea-run-brown/SR_1.png";
+import carouselImage2 from "../../../public/programs/sea-run-brown/SR_2.jpg";
+import carouselImage3 from "../../../public/programs/sea-run-brown/SR_3.jpg";
+import carouselImage4 from "../../../public/programs/sea-run-brown/SR_4.jpg";
+import carouselImage5 from "../../../public/programs/sea-run-brown/SR_5.jpg";
+
+const images = [
+  carouselImage1,
+  carouselImage2,
+  carouselImage3,
+  carouselImage4,
+  carouselImage5
+];
 
 const cards = [
   {
@@ -33,7 +48,7 @@ const cards = [
     href: "/programs/wade-and-float-combo",
   },
   {
-    img: Card3,
+    img: Card4,
     title: "Sea-Run Brown Trout",
     subhead: "southern patagonia",
     copy: "Our fishing program works on a split day beat rotation where every two (2) anglers and their guide fish a morning and an evening session with an extended mid-day break with lunch and time to rest at the lodge between each session...",
@@ -46,7 +61,7 @@ const copy = `Our carefully crafted trip itinerary walks you through the standar
 const rivers = [
   {
     river: "Río Grande",
-    img: "/Collon-3.jpeg",
+    img: "/rivers/rio_grande/RG_3.jpg",
     texts: [
       `With annual returns of 50,000+ fish and an average size exceeding 8 pounds, no other river in the world can rival the Rio Grande in Argentina's southern territory of Tierra del Fuego as the best place on the planet to catch sea-run brown trout. Combine the river with the best returns and the largest average size of sea-run brown trout with easy access to 12 miles of rested pools from a comfortable homestyle lodge designed for four (4) anglers per week, and that’s the San Jose Lodge fishing experience.
         Studies have shown that sea-run brown trout can return to the Rio Grande over four times to spawn during their lifecycle and reach a weight that exceeds 20+ pounds. With an average size exceeding 8+ pounds it’s truly a privilege to fish the Rio Grande for this remarkable strain of sea-run brown trout.
@@ -58,7 +73,7 @@ const rivers = [
 ---
 
 <Layout title="Sea-Run Brown Trout" href="">
-  <Hero title="Sea-Run Brown Trout" copy={copy} prehead="northern patagonia" />
+  <HeroCarousel title="Sea-Run Brown Trout" copy={copy} prehead="northern patagonia" images={images} className="sm" />
   <div class="container">
     <Rivers columns={rivers} />
   </div>

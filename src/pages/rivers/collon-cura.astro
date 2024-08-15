@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero/Hero.astro";
+import HeroCarousel from "../../components/HeroCarousel.astro";
 import Text from "../../components/Text/Text.astro";
 import Cards from "../../components/Cards/Cards.astro";
 import "./rivers.scss";
@@ -9,6 +9,20 @@ import Card1 from "../../../public/card-1.jpeg";
 import Card2 from "../../../public/card-2.jpg";
 import Card3 from "../../../public/card-3.jpg";
 import Heading from "../../components/Heading.astro";
+
+import carouselImage1 from "../../../public/rivers/collon/CC_1.jpg";
+import carouselImage2 from "../../../public/rivers/collon/CC_2.jpg";
+import carouselImage3 from "../../../public/rivers/collon/CC_3.jpg";
+import carouselImage4 from "../../../public/rivers/collon/CC_4.jpg";
+import carouselImage5 from "../../../public/rivers/collon/CC_5.jpg";
+
+const images = [
+  carouselImage1,
+  carouselImage2,
+  carouselImage3,
+  carouselImage4,
+  carouselImage5
+];
 
 const cards = [
   {
@@ -43,7 +57,7 @@ const cards = [
 ---
 
 <Layout title="Collon Cura" href="">
-  <Hero title="Collon Cura" />
+  <HeroCarousel title="Collon Cura" images={images} />
   <Text>
     <a href="/" class="back">
       <svg
