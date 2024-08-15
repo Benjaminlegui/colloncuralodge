@@ -1,8 +1,10 @@
 ---
 import { getImage } from "astro:assets";
 import Heading from "./Heading.astro";
-import Background from "../../public/Collon-4.jpeg";
-import Background1 from "../../public/Collon-3.jpeg";
+import Background from "../../public/homepage-carousel/carousel-1.jpg";
+import Background1 from "../../public/homepage-carousel/carousel-2.jpg";
+import Background2 from "../../public/homepage-carousel/carousel-3.jpg";
+import Background3 from "../../public/homepage-carousel/carousel-4.jpg";
 import Link from "./Link/Link.astro";
 import Carousel from "./Carousel/Carousel.astro";
 
@@ -12,7 +14,11 @@ const optimizedBackground1 = await getImage({
   format: "webp",
 });
 const optimizedBackground2 = await getImage({
-  src: Background,
+  src: Background2,
+  format: "webp",
+});
+const optimizedBackground3 = await getImage({
+  src: Background3,
   format: "webp",
 });
 
@@ -20,6 +26,7 @@ const backgrounds = [
   optimizedBackground,
   optimizedBackground1,
   optimizedBackground2,
+  optimizedBackground3,
 ];
 
 const { title } = Astro.props;
