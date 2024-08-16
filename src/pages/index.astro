@@ -12,7 +12,10 @@ import GrowingBoxes from "../components/GrowingBoxes/GrowingBoxes.astro";
 import carouselImage1 from "../../public/homepage-carousel/carousel-1.jpg";
 import carouselImage2 from "../../public/homepage-carousel/carousel-2.jpg";
 import carouselImage3 from "../../public/homepage-carousel/carousel-3.jpg";
-import carouelImage4 from "../../public/homepage-carousel/carousel-4.jpg";
+import carouselImage4 from "../../public/homepage-carousel/carousel-4.jpg";
+import carouselMobile1 from "../../public/homepage-carousel/carousel-mobile-1.jpg";
+import carouselMobile3 from "../../public/homepage-carousel/carousel-mobile-3.jpg";
+import carouselMobile4 from "../../public/homepage-carousel/carousel-mobile-4.jpg";
 
 const aboutUsInfo = {
   title: "About Us",
@@ -23,10 +26,21 @@ const aboutUsInfo = {
 };
 
 const cards = [
-  carouselImage1,
-  carouselImage2,
-  carouselImage3,
-  carouelImage4,
+  {
+    desktop: carouselImage1,
+    mobile: carouselMobile1,
+  },
+  {
+    desktop: carouselImage2,
+  },
+  {
+    desktop: carouselImage3,
+    mobile: carouselMobile3
+  },
+  {
+    desktop: carouselImage4,
+    mobile: carouselMobile4,
+  }
 ];
 ---
 

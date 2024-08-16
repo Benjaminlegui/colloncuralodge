@@ -15,10 +15,11 @@ const { title, images, prehead, copy, button = false, className } = Astro.props;
   <div class={`container`}>
     <div class="background">
       <Carousel cards={images}>
-        {images.map((image) => {
+        {images.map(({desktop, mobile}) => {
+          const mobileImage = mobile || desktop;
           return (
             <Slide>
-              <ImageOptimized imgSrc={image} />
+              <ImageOptimized desktopImgUrl={desktop} mobileImgUrl={mobileImage} alt="pepe"  />
             </Slide>
           );
         })}
@@ -75,6 +76,10 @@ const { title, images, prehead, copy, button = false, className } = Astro.props;
       @media (min-width: 1000px) {
         padding: 200px 0;
       }
+    }
+
+    &.height-big {
+      min-height: 500px;
     }
   }
 
