@@ -9,10 +9,10 @@ const { columns } = Astro.props;
   <h3 class={styles["rivers__title"]}>Visited Rivers:</h3>
   <div class={styles["rivers__boxes"]}>
     {
-      columns?.map(({ river, img, texts }) => {
+      columns?.map(({ river, img, texts, href }) => {
         return (
           <div class={styles.column}>
-            <a class={styles["box"]} href="/rivers/collon-cura">
+            <a class={styles["box"]} href={href}>
               <span class={styles["box__text"]}>{river}</span>
               <Image
                 class={styles["box__image"]}
