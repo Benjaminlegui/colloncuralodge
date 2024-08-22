@@ -5,6 +5,9 @@ import Text from "../../components/Text/Text.astro";
 import Rivers from "../../components/Rivers/Rivers.astro";
 import Cards from "../../components/Cards/Cards.astro";
 import Heading from "../../components/Heading.astro";
+import Gallery from "../../components/Gallery/Gallery";
+import Video from "../../components/Video/Video.astro";
+
 
 import Card1 from "../../../public/Cards/Twin-river.jpg";
 import Card2 from "../../../public/Cards/card_10_day.jpg";
@@ -97,6 +100,15 @@ const rivers = [
     href: '/rivers/middle-limay'
   },
 ];
+
+const items = [
+  { img: "/gallery/ten-day/ten-gallery-2.jpg" },
+  { img: "/gallery/ten-day/ten-gallery-5.jpg" },
+  { img: "/gallery/ten-day/ten-gallery-4.jpg" },
+  { img: "/gallery/ten-day/ten-gallery-6.jpg" },
+  { img: "/gallery/ten-day/ten-gallery-3.jpg" },
+  { img: "/gallery/ten-day/ten-gallery-1.jpg" },
+]
 ---
 
 <Layout title="The 10 day tour" href="">
@@ -195,6 +207,8 @@ const rivers = [
       </ul>
     </div>
   </Text>
+  <Video url="https://www.youtube.com/embed/lC38VOUvwno?si=si-IH83sQfcLZ0Vj" />
+  <Gallery client:load items={items} />
   <div style={{ overflow: "hidden" }}>
     <div class="container">
       <Heading

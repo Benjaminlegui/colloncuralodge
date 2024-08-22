@@ -1,0 +1,14 @@
+---
+import { YouTube } from 'astro-embed';
+import styles from './Video.module.scss';
+
+const { url } = Astro.props;
+---
+
+<section class={styles.video}>
+    <div class=`container`>
+        <div class={`${styles['video-wrapper']}`}>
+            <YouTube id={url} posterQuality="max" class={styles.video} />
+        </div>
+    </div>
+</section>
