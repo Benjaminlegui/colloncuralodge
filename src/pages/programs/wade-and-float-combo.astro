@@ -5,6 +5,7 @@ import Text from "../../components/Text/Text.astro";
 import Rivers from "../../components/Rivers/Rivers.astro";
 import Cards from "../../components/Cards/Cards.astro";
 import Heading from "../../components/Heading.astro";
+import Gallery from "../../components/Gallery/Gallery";
 
 import Card1 from "../../../public/Cards/Twin-river.jpg";
 import Card2 from "../../../public/Cards/card_10_day.jpg";
@@ -85,6 +86,16 @@ const rivers = [
     href: "/rivers/chimehuin",
   },
 ];
+
+const imageGalleryPhotos = [
+  { img: "/gallery/wade-gallery/wade-gallery-1.jpg" },
+  { img: "/gallery/wade-gallery/wade-gallery-2.jpg" },
+  { img: "/gallery/wade-gallery/wade-gallery-6.jpg" },
+  { img: "/gallery/wade-gallery/wade-gallery-3.jpg" },
+  { img: "/gallery/wade-gallery/wade-gallery-4.jpg" },
+  { img: "/gallery/wade-gallery/wade-gallery-7.jpg" },
+  { img: "/gallery/wade-gallery/wade-gallery-5.jpg" },
+]
 ---
 
 <Layout title="wade and float combo" href="">
@@ -190,6 +201,7 @@ const rivers = [
       </ul>
     </div>
   </Text>
+  <Gallery items={imageGalleryPhotos} client:visible />
   <div style={{ overflow: "hidden" }}>
     <div class="container">
       <Heading

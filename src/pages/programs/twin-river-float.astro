@@ -5,6 +5,8 @@ import Text from "../../components/Text/Text.astro";
 import Rivers from "../../components/Rivers/Rivers.astro";
 import Cards from "../../components/Cards/Cards.astro";
 import Heading from "../../components/Heading.astro";
+import Gallery from "../../components/Gallery/Gallery";
+import Video from "../../components/Video/Video.astro";
 
 import Card1 from "../../../public/Cards/Twin-river.jpg";
 import Card2 from "../../../public/Cards/card_10_day.jpg";
@@ -84,6 +86,15 @@ const rivers = [
     href: '/rivers/middle-limay'
   },
 ];
+
+const imageGalleryPhotos = [
+  { img: "/rivers/middle/ML-4.jpg" },
+  { img: "/gallery/twin-gallery/twin-gallery-1.jpg" },
+  { img: "/gallery/twin-gallery/twin-gallery-4.jpg" },
+  { img: "/gallery/twin-gallery/twin-gallery-3.jpg" },
+  { img: "/rivers/middle/ML-2.jpg" },
+  { img: "/gallery/twin-gallery/twin-gallery-2.jpg" },
+]
 ---
 
 <Layout title="Twin River Float" href="">
@@ -170,6 +181,8 @@ const rivers = [
       </ul>
     </div>
   </Text>
+  <Video url='https://www.youtube.com/embed/PNRfir00_KI?si=DuVQPSgq9lQHrZss' />
+  <Gallery items={imageGalleryPhotos} client:visible />
   <div style={{ overflow: "hidden" }}>
     <div class="container">
       <Heading

@@ -5,6 +5,7 @@ import Text from "../../components/Text/Text.astro";
 import Rivers from "../../components/Rivers/Rivers.astro";
 import Cards from "../../components/Cards/Cards.astro";
 import Heading from "../../components/Heading.astro";
+import Gallery from "../../components/Gallery/Gallery";
 
 import Card1 from "../../../public/Cards/Twin-river.jpg";
 import Card2 from "../../../public/Cards/card_10_day.jpg";
@@ -81,6 +82,18 @@ const rivers = [
     href: "/rivers/rio-grande",
   },
 ];
+
+const imageGalleryPhotos = [
+  { img: "/homepage-carousel/carousel-mobile-3.jpg" },
+  { img: "/gallery/sea-gallery/sea-run-2.jpg" },
+  { img: "/gallery/sea-gallery/sea-run-3.jpg" },
+  { img: "/homepage-carousel/carousel-4.jpg" },
+  { img: "/homepage-carousel/carousel-mobile-1.jpg" },
+  { img: "/gallery/sea-gallery/sea-run-6.jpg" },
+  { img: "/gallery/sea-gallery/sea-run-7.jpg" },
+  { img: "/gallery/sea-gallery/sea-run-8.jpg" },
+  { img: "/gallery/sea-gallery/sea-run-9.jpg" },
+]
 ---
 
 <Layout title="Sea-Run Brown Trout" href="">
@@ -229,6 +242,7 @@ const rivers = [
       </ul>
     </div>
   </Text>
+  <Gallery items={imageGalleryPhotos} client:visible />
   <div style={{ overflow: "hidden" }}>
     <div class="container">
       <Heading

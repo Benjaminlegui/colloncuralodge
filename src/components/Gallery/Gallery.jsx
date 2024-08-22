@@ -12,7 +12,7 @@ const Gallery = ({ items = []}) => {
                     // Adds 8px of space between the grid cells
                     columnGutter={10}
                     // Sets the minimum column width to 172px
-                    columnWidth={400}
+                    columnWidth={350}
                     render={GalleryCard}
                 />
             </div>
