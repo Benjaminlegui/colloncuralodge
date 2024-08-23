@@ -42,14 +42,12 @@ const cards = [
 
 <section class="section">
   <div class="container">
-    <div class="heading">
-      <Image src="/favicon-black.png" alt="logo" width="200" height="200" class="img" />
+    <div class="heading" data-aos="fade-up" data-aos-once="true">
+      <Image src="/patagon-icon-white.png" alt="logo" width="200" height="200" class="img" />
       <Heading
         tag={`h2`}
         text={`Programs`}
         class="title"
-        data-aos="fade-up"
-        data-aos-once="true"
       />
   </div>
     <Cards cards={cards} />
@@ -60,13 +58,14 @@ const cards = [
   .section {
     padding: 50px 0;
     overflow: hidden;
+    background-color: var(--color-kaki);
   }
 
   .title {
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
-    color: black;
+    color: white;
   }
 
   .container {
